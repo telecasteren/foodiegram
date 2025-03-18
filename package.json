@@ -1,0 +1,11 @@
+{
+  "name": "social-media-app",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "npx tailwindcss -i ./css/input.css -o ./css/styles.css --watch",
+    "build": "npx tailwindcss -i ./css/input.css -o ./css/styles.css --minify"
+  },
+  "dependencies": {
+    "@tailwindcss/typography": "^0.5.16"
+  }
+}
