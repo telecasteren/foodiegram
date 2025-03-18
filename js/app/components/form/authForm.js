@@ -15,7 +15,7 @@ export default function AuthForm(isSignup = false) {
   logo.alt = "Foodiegram logo";
 
   const title = document.createElement("h2");
-  title.className = "mt-10 text-center text-2xl tracking-tight";
+  title.className = "mt-10 text-center text-bigger tracking-tight";
   title.textContent = isSignup
     ? "Create your account."
     : "Log in to your account.";

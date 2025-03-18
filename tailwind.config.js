@@ -15,6 +15,7 @@ module.exports = {
     extend: {
       fontSize: {
         tiny: "0.625rem",
+        bigger: "2.8rem",
         huge: "3.5rem",
         massive: "5rem",
       },

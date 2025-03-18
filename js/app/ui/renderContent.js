@@ -3,6 +3,7 @@ import Profile from "/js/app/routes/profile/createProfile.js";
 import Feed from "/js/app/routes/feed/createFeed.js";
 import { updateUnderline } from "/js/app/components/navbar/updateUnderline.js";
 import { displayAuthForms } from "/js/app/events/authForm/displayAuthForms.js";
+import { createCards } from "/js/app/routes/feed/createCards.js";
 
 export default function renderContent() {
   function renderPage() {
@@ -23,7 +24,7 @@ export default function renderContent() {
       case "/user/feed/":
         if (feedContent) {
           feedContent.innerHTML = "";
-          feedContent.appendChild(Feed());
+          feedContent.appendChild(Feed(), createCards());
         }
         break;
       case "/user/profile/":

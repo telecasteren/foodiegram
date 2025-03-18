@@ -8,7 +8,7 @@
 
 @layer components {
   .btn {
-    @apply rounded-full flex items-center justify-center text-sm h-10 sm:h-12 m-4 px-4 sm:px-5 sm:min-w-44;
+    @apply rounded-full flex items-center justify-center text-sm h-10 sm:h-12 m-8 px-4 sm:px-5 sm:min-w-44;
   }
 
   .btn-primary {

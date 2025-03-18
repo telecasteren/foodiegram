@@ -1,0 +1,47 @@
+import { posts } from "/js/utils/source/posts/posts.js";
+
+export function createCards() {
+  const feedContent = document.getElementById("feed-content");
+
+  const cardContainer = document.createElement("div");
+  cardContainer.className =
+    "flex flex-column flex-wrap gap-16 justify-center m-20";
+
+  posts.forEach((post) => {
+    const card = document.createElement("div");
+    card.className = `max-w-sm w-80 bg-white border border-gray-200 rounded-lg
+    shadow-sm dark:bg-gray-800 dark:border-gray-700 hover:scale-105 transition-transform duration-300`;
+
+    const linkImage = document.createElement("a");
+    linkImage.href = "#";
+    const image = document.createElement("img");
+    image.className = "rounded-t-lg w-full h-48 object-cover";
+    image.src = post.imgSrc;
+    image.alt = post.imgAlt;
+    linkImage.appendChild(image);
+
+    const contentDiv = document.createElement("div");
+    contentDiv.className = "p-5";
+
+    const linkTitle = document.createElement("a");
+    linkTitle.href = "#";
+    const title = document.createElement("h5");
+    title.className =
+      "mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white";
+    title.textContent = post.title;
+    linkTitle.appendChild(title);
+
+    const paragraph = document.createElement("p");
+    paragraph.className = "mb-3 font-normal text-gray-700 dark:text-gray-400";
+    paragraph.textContent = post.caption;
+
+    contentDiv.appendChild(linkTitle);
+    contentDiv.appendChild(paragraph);
+
+    card.appendChild(linkImage);
+    card.appendChild(contentDiv);
+
+    cardContainer.appendChild(card);
+    feedContent.appendChild(cardContainer);
+  });
+}
