@@ -1,16 +1,14 @@
 import { posts } from "/js/utils/source/posts/posts.js";
 
 export function createCards() {
-  const feedContent = document.getElementById("feed-content");
-
   const cardContainer = document.createElement("div");
   cardContainer.className =
-    "flex flex-column flex-wrap gap-16 justify-center m-20";
+    "flex flex-column flex-wrap gap-4 sm:gap-6 lg:gap-16 justify-center m-20";
 
   posts.forEach((post) => {
     const card = document.createElement("div");
     card.className = `max-w-sm w-80 bg-white border border-gray-200 rounded-lg
-    shadow-sm dark:bg-gray-800 dark:border-gray-700 hover:scale-105 transition-transform duration-300`;
+    shadow-sm dark:bg-[#0f0c29] dark:border-none hover:scale-105 transition-transform duration-300`;
 
     const linkImage = document.createElement("a");
     linkImage.href = "#";
@@ -42,6 +40,7 @@ export function createCards() {
     card.appendChild(contentDiv);
 
     cardContainer.appendChild(card);
-    feedContent.appendChild(cardContainer);
   });
+
+  return cardContainer;
 }

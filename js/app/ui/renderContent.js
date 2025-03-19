@@ -24,7 +24,8 @@ export default function renderContent() {
       case "/user/feed/":
         if (feedContent) {
           feedContent.innerHTML = "";
-          feedContent.appendChild(Feed(), createCards());
+          feedContent.prepend(Feed());
+          feedContent.appendChild(createCards());
         }
         break;
       case "/user/profile/":

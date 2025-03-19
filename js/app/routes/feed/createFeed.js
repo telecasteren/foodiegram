@@ -1,13 +1,17 @@
 import { createTitle } from "/js/app/components/pageTitle/title.js";
+import searchInput from "/js/app/components/search/searchInput.js";
 
 export default function Feed() {
-  const profileContainer = document.createElement("div");
-  profileContainer.className =
-    "profile-container justify-items-center min-h-screen p-8 gap-16";
+  const headerContent = document.createElement("div");
+  headerContent.className = "feed-header justify-items-center p-8 gap-16";
 
-  const title = createTitle("Feed.");
+  const title = createTitle("Feed me.");
+  title.className = "text-bigger m-4";
 
-  profileContainer.appendChild(title);
+  const searchBar = searchInput();
 
-  return profileContainer;
+  headerContent.appendChild(title);
+  headerContent.appendChild(searchBar);
+
+  return headerContent;
 }

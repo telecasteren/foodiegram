@@ -6,6 +6,7 @@ export default function Profile() {
     "profile-container justify-items-center min-h-screen p-8 gap-16";
 
   const title = createTitle("Profile.");
+  title.className = "text-bigger m-4";
 
   profileContainer.appendChild(title);
 
