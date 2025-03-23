@@ -8,11 +8,7 @@
 
 **Profile**
 
-- Profile image
-- Username
 - List of the users posts
-- Follow button
-- Display following/followers (numberOf?)
 
 **General**
 
