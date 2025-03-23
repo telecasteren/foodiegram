@@ -33,6 +33,13 @@ module.exports = {
           dark: "#33e94e",
           light: "#e9b61c",
         },
+        modal: {
+          bg: "",
+          text: "",
+          close: "",
+          shadow: "",
+          overlay: "",
+        },
       },
     },
   },

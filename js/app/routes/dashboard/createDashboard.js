@@ -23,6 +23,7 @@ export default function Dashboard() {
     newTab: false,
   });
   loginBtn.id = "loginBtn";
+  loginBtn.classList.add("btn-primary");
   loginBtn.addEventListener("click", (e) => e.preventDefault());
 
   const signupBtn = createButton({
@@ -31,6 +32,7 @@ export default function Dashboard() {
     newTab: false,
   });
   signupBtn.id = "signupBtn";
+  signupBtn.classList.add("btn-secondary");
   signupBtn.addEventListener("click", (e) => e.preventDefault());
 
   dashboardContainer.appendChild(header);

@@ -7,7 +7,7 @@ export const posts = [
     caption: "When food meets plate, pizza is my date.",
     text: "Post text content will be added in this field later.",
     likes: "",
-    username: "",
+    username: "JimmyCraig",
     userId: "",
     comments: {
       id: "",
@@ -25,7 +25,7 @@ export const posts = [
     caption: "Juicy, cheesy, and absolutely delicious!",
     text: "From classic cheeseburgers to gourmet creations, the world of burgers is as diverse as it is mouthwatering.",
     likes: "",
-    username: "",
+    username: "JaneDoe95",
     userId: "",
     comments: {
       id: "",
@@ -43,7 +43,7 @@ export const posts = [
     caption: "A warm hug in a bowl of noodles and broth.",
     text: "Whether it's tonkotsu, miso, or shoyu, ramen is the ultimate comfort food that brings people together.",
     likes: "",
-    username: "",
+    username: "ChrisGoesWhereFoodIs",
     userId: "",
     comments: {
       id: "",
@@ -61,7 +61,7 @@ export const posts = [
     caption: "Sweet treats that melt in your mouth!",
     text: "From croissants to cupcakes, the world of baking is filled with endless possibilities for delightful indulgence.",
     likes: "",
-    username: "",
+    username: "BakingWithEmily",
     userId: "",
     comments: {
       id: "",
@@ -79,7 +79,7 @@ export const posts = [
     caption: "Nature's sweetest gifts in vibrant colors.",
     text: "From dragon fruit to mangosteen, these exotic fruits are as delicious as they are beautiful.",
     likes: "",
-    username: "",
+    username: "Fusion_John",
     userId: "",
     comments: {
       id: "",
@@ -97,7 +97,7 @@ export const posts = [
     caption: "Spice, crunch, and everything nice!",
     text: "Tacos are more than just food; they're a cultural experience wrapped in a tortilla.",
     likes: "",
-    username: "",
+    username: "Lazy_with_Liam",
     userId: "",
     comments: {
       id: "",

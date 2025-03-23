@@ -1,13 +1,10 @@
 ## TO DO
 
-**Auth page**
-
-- Mobile navbar .active li element updated
-
 **Feed**
 
 - Sort options
-- Create post form
+- Color design on new post form
+- Create new post button styling
 
 **Profile**
 
@@ -19,5 +16,6 @@
 
 **General**
 
-- Check brief
+- Mobile navbar .active li element updated
 - Write ReadMe documentation
+- Check brief

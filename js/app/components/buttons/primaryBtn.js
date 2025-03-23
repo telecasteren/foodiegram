@@ -1,17 +1,17 @@
 function createButton({ text, href, newTab = false }) {
-  const primaryBtn = document.createElement("a");
-  primaryBtn.className = "btn btn-primary";
+  const button = document.createElement("a");
+  button.className = "btn";
 
-  primaryBtn.href = href || "#";
-  primaryBtn.target = newTab ? "_blank" : "_self";
+  button.href = href || "#";
+  button.target = newTab ? "_blank" : "_self";
 
   if (newTab) {
-    primaryBtn.rel = "noopener noreferrer";
+    button.rel = "noopener noreferrer";
   }
 
-  primaryBtn.textContent = text;
+  button.textContent = text;
 
-  return primaryBtn;
+  return button;
 }
 export default createButton;
 

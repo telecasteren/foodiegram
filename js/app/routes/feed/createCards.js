@@ -21,6 +21,11 @@ export function createCards() {
     const contentDiv = document.createElement("div");
     contentDiv.className = "p-5";
 
+    const authorName = document.createElement("h5");
+    authorName.className =
+      "mb-2 text-2xl font-bold tracking-tight text-accent-light dark:text-accent-dark";
+    authorName.textContent = post.username;
+
     const linkTitle = document.createElement("a");
     linkTitle.href = "#";
     const title = document.createElement("h5");
@@ -33,6 +38,7 @@ export function createCards() {
     paragraph.className = "mb-3 font-normal text-gray-700 dark:text-gray-400";
     paragraph.textContent = post.caption;
 
+    contentDiv.appendChild(authorName);
     contentDiv.appendChild(linkTitle);
     contentDiv.appendChild(paragraph);
 

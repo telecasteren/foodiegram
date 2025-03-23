@@ -12,18 +12,31 @@
   }
 
   .btn-primary {
-    @apply bg-black text-white hover:bg-[var(--accent)] hover:text-black transition-colors duration-300;
+    @apply bg-[var(--accent)] text-black hover:brightness-110 transition-colors duration-300;
+  }
+
+  .btn-secondary {
+    @apply bg-black text-white hover:bg-stone-900 transition-colors duration-300;
   }
 
   .input-field {
-    @apply block w-full rounded-md bg-white px-3 py-1.5 outline-1 text-black placeholder:text-black sm:text-sm;
+    @apply block w-full cursor-pointer rounded-md bg-white px-3 py-1.5 outline-1 text-black placeholder:text-black sm:text-sm;
   }
 
   .input-border {
-    @apply border border-solid border-black dark:border-none;
+    @apply border border-solid border-black dark:border-none dark:focus:ring-blue-500;
   }
 
   .submit-btn {
     @apply flex w-full justify-center rounded-md px-3 py-1.5 text-sm font-semibold;
+  }
+
+  .modal {
+    @apply fixed inset-0 z-[1000] overflow-auto gap-20 bg-black/50;
+  }
+
+  .modal-content {
+    @apply bg-white m-[15%] mx-auto p-2 border border-black w-[60%] 
+         h-fit rounded-lg z-[1100] relative grid;
   }
 }

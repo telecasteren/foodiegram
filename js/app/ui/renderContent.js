@@ -4,6 +4,7 @@ import Feed from "/js/app/routes/feed/createFeed.js";
 import { updateUnderline } from "/js/app/components/navbar/updateUnderline.js";
 import { displayAuthForms } from "/js/app/events/authForm/displayAuthForms.js";
 import { createCards } from "/js/app/routes/feed/createCards.js";
+import { newPostBtnEvents } from "/js/app/events/feed/newPostBtnEvents.js";
 
 export default function renderContent() {
   function renderPage() {
@@ -26,6 +27,7 @@ export default function renderContent() {
           feedContent.innerHTML = "";
           feedContent.prepend(Feed());
           feedContent.appendChild(createCards());
+          newPostBtnEvents();
         }
         break;
       case "/user/profile/":
