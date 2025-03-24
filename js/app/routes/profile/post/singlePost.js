@@ -46,7 +46,7 @@ export default function SinglePost() {
 
   const commentSection = document.createElement("div");
   commentSection.className = `border border-solid border-gray-200 dark:border-[#0f0c29]
-  p-5 w-96 rounded-r-sm`;
+  pt-8 pr-5 pb-5 pl-5 w-96 rounded-r-sm`;
 
   const comment = Comments();
   commentSection.appendChild(comment);

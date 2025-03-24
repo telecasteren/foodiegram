@@ -15,7 +15,7 @@ export default function Comments() {
 
   const nameSpan = document.createElement("span");
   nameSpan.className = "text-sm font-semibold text-gray-900 dark:text-white";
-  nameSpan.textContent = "Bonnie Green";
+  nameSpan.textContent = "Donnie Green";
 
   const timeSpan = document.createElement("span");
   timeSpan.className = "text-sm font-normal text-gray-500 dark:text-gray-400";

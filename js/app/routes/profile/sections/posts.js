@@ -26,7 +26,7 @@ export default function Posts() {
         "absolute justify-center flex flex-wrap gap-2 bg-white text-black rounded-md p-1";
 
       const likes = document.createElement("div");
-      const numOfLikes = post.likes ? post.likes.length : 0;
+      const numOfLikes = post.likes ? post.likes : 0;
       likes.innerText = `♥️ ${numOfLikes} Likes`;
       statsWrapper.appendChild(likes);
 

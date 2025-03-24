@@ -1357,6 +1357,10 @@ video {
   padding: 2.5rem;
 }
 
+.p-6{
+  padding: 1.5rem;
+}
+
 .px-2\.5{
   padding-left: 0.625rem;
   padding-right: 0.625rem;
@@ -1413,6 +1417,22 @@ video {
 
 .ps-3{
   padding-inline-start: 0.75rem;
+}
+
+.pt-8{
+  padding-top: 2rem;
+}
+
+.pb-5{
+  padding-bottom: 1.25rem;
+}
+
+.pl-5{
+  padding-left: 1.25rem;
+}
+
+.pr-5{
+  padding-right: 1.25rem;
 }
 
 .text-center{
