@@ -7,7 +7,7 @@ export default function Heading() {
   const user = users[userIndex];
 
   const userHeading = document.createElement("div");
-  userHeading.className = "flex flex-wrap justify-end items-center gap-2";
+  userHeading.className = "flex flex-wrap justify-center items-center gap-2";
 
   const username = createTitle(user.username);
   username.className = "text-bigger m-4";
@@ -25,7 +25,6 @@ export default function Heading() {
   const avatar = document.createElement("img");
   avatar.src = user.avatarSrc;
   avatar.alt = user.avatarAlt;
-  avatar.className = "rounded-full";
 
   if (avatar.src != null || "") {
     avatarWrapper.appendChild(avatar);

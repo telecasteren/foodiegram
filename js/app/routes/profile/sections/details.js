@@ -7,8 +7,7 @@ export default function Details() {
   const user = users[userIndex];
 
   const userDetails = document.createElement("div");
-  userDetails.className =
-    "flex flex-wrap justify-center mr-0 items-center gap-2 md:justify-end md:mr-5";
+  userDetails.className = "flex flex-wrap justify-center mr-0 gap-2 md:ml-24";
 
   const username = createTitle(user.name);
   username.className = "text-sm m-4";

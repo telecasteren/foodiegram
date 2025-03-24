@@ -16,7 +16,7 @@
   }
 
   .btn-secondary {
-    @apply bg-black text-white hover:bg-stone-900 transition-colors duration-300;
+    @apply bg-black text-white hover:bg-[var(--accent)] dark:hover:text-black transition-colors duration-300;
   }
 
   .input-field {

@@ -2,13 +2,13 @@
 
 **Feed**
 
-- Sort options
+- Sort options: Most recent, Most liked, Most commented
 - Color design on new post form
 - Create new post button styling
 
 **Profile**
 
-- List of the users posts
+- Display only posts by current logged in user
 
 **General**
 

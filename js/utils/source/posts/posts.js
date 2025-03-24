@@ -1,3 +1,7 @@
+import { users } from "/js/utils/source/users/users.js";
+
+const userLookup = Object.fromEntries(users.map((user) => [user.id, user]));
+
 export const posts = [
   {
     id: "1",
@@ -7,15 +11,24 @@ export const posts = [
     caption: "When food meets plate, pizza is my date.",
     text: "Post text content will be added in this field later.",
     likes: "",
-    username: "JimmyCraig",
-    userId: "",
-    comments: {
-      id: "",
-      text: "",
-      likes: "",
-      username: "",
-      userId: "",
-    },
+    username: userLookup[1].username,
+    userId: 1,
+    comments: [
+      {
+        id: "c1",
+        text: "Looks amazing!",
+        likes: 2,
+        username: "alice",
+        userId: 2,
+      },
+      {
+        id: "c2",
+        text: "I want to visit!",
+        likes: 3,
+        username: "bob",
+        userId: 3,
+      },
+    ],
   },
   {
     id: "2",
@@ -25,15 +38,17 @@ export const posts = [
     caption: "Juicy, cheesy, and absolutely delicious!",
     text: "From classic cheeseburgers to gourmet creations, the world of burgers is as diverse as it is mouthwatering.",
     likes: "",
-    username: "JaneDoe95",
-    userId: "",
-    comments: {
-      id: "",
-      text: "",
-      likes: "",
-      username: "",
-      userId: "",
-    },
+    username: userLookup[1].username,
+    userId: 1,
+    comments: [
+      {
+        id: "c3",
+        text: "This is mouthwatering!",
+        likes: 5,
+        username: "charlie",
+        userId: 4,
+      },
+    ],
   },
   {
     id: "3",
@@ -43,15 +58,9 @@ export const posts = [
     caption: "A warm hug in a bowl of noodles and broth.",
     text: "Whether it's tonkotsu, miso, or shoyu, ramen is the ultimate comfort food that brings people together.",
     likes: "",
-    username: "ChrisGoesWhereFoodIs",
-    userId: "",
-    comments: {
-      id: "",
-      text: "",
-      likes: "",
-      username: "",
-      userId: "",
-    },
+    username: userLookup[3].username,
+    userId: 3,
+    comments: [],
   },
   {
     id: "4",
@@ -61,15 +70,9 @@ export const posts = [
     caption: "Sweet treats that melt in your mouth!",
     text: "From croissants to cupcakes, the world of baking is filled with endless possibilities for delightful indulgence.",
     likes: "",
-    username: "BakingWithEmily",
-    userId: "",
-    comments: {
-      id: "",
-      text: "",
-      likes: "",
-      username: "",
-      userId: "",
-    },
+    username: userLookup[4].username,
+    userId: 4,
+    comments: [],
   },
   {
     id: "5",
@@ -79,32 +82,20 @@ export const posts = [
     caption: "Nature's sweetest gifts in vibrant colors.",
     text: "From dragon fruit to mangosteen, these exotic fruits are as delicious as they are beautiful.",
     likes: "",
-    username: "Fusion_John",
-    userId: "",
-    comments: {
-      id: "",
-      text: "",
-      likes: "",
-      username: "",
-      userId: "",
-    },
+    username: userLookup[5].username,
+    userId: 5,
+    comments: [],
   },
   {
     id: "6",
-    title: "Tacos: A Bite of Happiness",
+    title: "Old Fashioned Happiness",
     imgSrc: "/resources/images/adam-jaime-dmkmrNptMpw-unsplash.jpg",
     imgAlt: "adam-jaime-dmkmrNptMpw-unsplash",
-    caption: "Spice, crunch, and everything nice!",
-    text: "Tacos are more than just food; they're a cultural experience wrapped in a tortilla.",
+    caption: "Bitter, spice and everything nice!",
+    text: "A traditional experience enhanced with citrus and cinnamon.",
     likes: "",
-    username: "Lazy_with_Liam",
-    userId: "",
-    comments: {
-      id: "",
-      text: "",
-      likes: "",
-      username: "",
-      userId: "",
-    },
+    username: userLookup[6].username,
+    userId: 6,
+    comments: [],
   },
 ];
