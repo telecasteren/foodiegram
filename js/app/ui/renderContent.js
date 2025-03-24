@@ -1,18 +1,22 @@
 import Dashboard from "/js/app/routes/dashboard/createDashboard.js";
-import Profile from "/js/app/routes/profile/createProfile.js";
 import Feed from "/js/app/routes/feed/createFeed.js";
+import Profile from "/js/app/routes/profile/createProfile.js";
+import SinglePost from "/js/app/routes/profile/post/singlePost.js";
 import { updateUnderline } from "/js/app/components/navbar/updateUnderline.js";
 import { displayAuthForms } from "/js/app/events/authForm/displayAuthForms.js";
 import { createCards } from "/js/app/routes/feed/createCards.js";
 import { newPostBtnEvents } from "/js/app/events/feed/newPostBtnEvents.js";
+import { openPost } from "/js/app/events/profile/goToPost.js";
 
 export default function renderContent() {
   function renderPage() {
     const authContent = document.getElementById("auth-content");
     const feedContent = document.getElementById("feed-content");
     const profileContent = document.getElementById("profile-content");
+    const postContent = document.getElementById("post-content");
 
-    if (!authContent && !profileContent && !feedContent) return;
+    // Make sure the container exist first
+    if (!authContent && !profileContent && !feedContent && !postContent) return;
 
     switch (window.location.pathname) {
       case "/":
@@ -28,12 +32,20 @@ export default function renderContent() {
           feedContent.prepend(Feed());
           feedContent.appendChild(createCards());
           newPostBtnEvents();
+          openPost();
         }
         break;
       case "/user/profile/":
         if (profileContent) {
           profileContent.innerHTML = "";
           profileContent.appendChild(Profile());
+          openPost();
+        }
+        break;
+      case "/user/post/":
+        if (postContent) {
+          postContent.innerHTML = "";
+          postContent.appendChild(SinglePost());
         }
         break;
       default:

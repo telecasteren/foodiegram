@@ -4,7 +4,7 @@ const userLookup = Object.fromEntries(users.map((user) => [user.id, user]));
 
 export const posts = [
   {
-    id: "1",
+    id: 1,
     imgSrc: "/resources/images/rayul-_M6gy9oHgII-unsplash.webp",
     imgAlt: "rayul-_M6gy9oHgII-unsplash",
     title: "Travel for food in 2025",
@@ -13,6 +13,7 @@ export const posts = [
     likes: "",
     username: userLookup[1].username,
     userId: 1,
+    createdAt: "2025-03-21T12:00:00Z",
     comments: [
       {
         id: "c1",
@@ -20,6 +21,7 @@ export const posts = [
         likes: 2,
         username: "alice",
         userId: 2,
+        createdAt: "",
       },
       {
         id: "c2",
@@ -27,11 +29,12 @@ export const posts = [
         likes: 3,
         username: "bob",
         userId: 3,
+        createdAt: "",
       },
     ],
   },
   {
-    id: "2",
+    id: 2,
     title: "The Ultimate Burger Experience",
     imgSrc: "/resources/images/chad-montano--GFCYhoRe48-unsplash.jpg",
     imgAlt: "chad-montano--GFCYhoRe48-unsplash",
@@ -40,6 +43,7 @@ export const posts = [
     likes: "",
     username: userLookup[1].username,
     userId: 1,
+    createdAt: "2025-03-23T12:00:00Z",
     comments: [
       {
         id: "c3",
@@ -47,11 +51,12 @@ export const posts = [
         likes: 5,
         username: "charlie",
         userId: 4,
+        createdAt: "",
       },
     ],
   },
   {
-    id: "3",
+    id: 3,
     title: "Savoring the Best Ramen Bowls",
     imgSrc: "/resources/images/casey-lee-awj7sRviVXo-unsplash.jpg",
     imgAlt: "casey-lee-awj7sRviVXo-unsplash",
@@ -60,10 +65,11 @@ export const posts = [
     likes: "",
     username: userLookup[3].username,
     userId: 3,
+    createdAt: "2025-03-03T12:00:00Z",
     comments: [],
   },
   {
-    id: "4",
+    id: 4,
     title: "The Art of Baking Perfection",
     imgSrc: "/resources/images/brooke-lark-1Rm9GLHV0UA-unsplash.jpg",
     imgAlt: "brooke-lark-1Rm9GLHV0UA-unsplash",
@@ -72,10 +78,11 @@ export const posts = [
     likes: "",
     username: userLookup[4].username,
     userId: 4,
+    createdAt: "2025-02-14T12:00:00Z",
     comments: [],
   },
   {
-    id: "5",
+    id: 5,
     title: "Exotic Fruits You Must Try",
     imgSrc: "/resources/images/anh-nguyen-kcA-c3f_3FE-unsplash.jpg",
     imgAlt: "anh-nguyen-kcA-c3f_3FE-unsplash",
@@ -84,10 +91,11 @@ export const posts = [
     likes: "",
     username: userLookup[5].username,
     userId: 5,
+    createdAt: "2024-06-18T12:00:00Z",
     comments: [],
   },
   {
-    id: "6",
+    id: 6,
     title: "Old Fashioned Happiness",
     imgSrc: "/resources/images/adam-jaime-dmkmrNptMpw-unsplash.jpg",
     imgAlt: "adam-jaime-dmkmrNptMpw-unsplash",
@@ -96,6 +104,7 @@ export const posts = [
     likes: "",
     username: userLookup[6].username,
     userId: 6,
+    createdAt: "2023-11-08T12:00:00Z",
     comments: [],
   },
 ];

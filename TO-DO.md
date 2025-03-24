@@ -8,7 +8,8 @@
 
 **Profile**
 
-- Display only posts by current logged in user
+- Display only posts by current logged in user --> Match userIds in postLookup at profile/./posts.js
+- Display correct comments for each post on post page
 
 **General**
 

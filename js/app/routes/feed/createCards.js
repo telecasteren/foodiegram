@@ -7,6 +7,7 @@ export function createCards() {
 
   posts.forEach((post) => {
     const card = document.createElement("div");
+    card.setAttribute("data-id", post.id);
     card.className = `max-w-sm w-80 bg-white border border-gray-200 rounded-lg
     shadow-sm dark:bg-[#0f0c29] dark:border-none hover:scale-105 transition-transform duration-300`;
 

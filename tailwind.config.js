@@ -1,3 +1,5 @@
+const { dateBadge } = require("./js/app/routes/profile/post/createBadge");
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ["./**/*.{html,js}", "!./node_modules/**/*"],
