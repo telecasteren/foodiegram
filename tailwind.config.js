@@ -1,5 +1,3 @@
-const { dateBadge } = require("./js/app/routes/profile/post/createBadge");
-
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ["./**/*.{html,js}", "!./node_modules/**/*"],
@@ -35,13 +33,13 @@ module.exports = {
           dark: "#33e94e",
           light: "#e9b61c",
         },
-        modal: {
-          bg: "",
-          text: "",
-          close: "",
-          shadow: "",
-          overlay: "",
-        },
+        // modal: {
+        //   bg: "",
+        //   text: "",
+        //   close: "",
+        //   shadow: "",
+        //   overlay: "",
+        // },
       },
     },
   },

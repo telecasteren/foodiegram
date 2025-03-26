@@ -2,10 +2,14 @@
   "name": "social-media-app",
   "version": "1.0.0",
   "scripts": {
-    "dev": "npx tailwindcss -i ./css/input.css -o ./css/styles.css --watch",
-    "build": "npx tailwindcss -i ./css/input.css -o ./css/styles.css --minify"
+    "dev": "concurrently \"npm run tailwind\" \"node server.js\"",
+    "tailwind": "npx tailwindcss -i ./public/css/input.css -o ./public/css/styles.css --watch",
+    "build": "npx tailwindcss -i ./public/css/input.css -o ./public/css/styles.css --minify"
   },
   "dependencies": {
     "@tailwindcss/typography": "^0.5.16"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
   }
 }

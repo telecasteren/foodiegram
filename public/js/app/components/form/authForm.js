@@ -28,7 +28,7 @@ export default function AuthForm(isSignup = false) {
 
   const form = document.createElement("form");
   form.className = "space-y-6";
-  form.setAttribute("action", "/profile");
+  form.setAttribute("action", "/user/profile/");
   form.setAttribute("method", "POST");
 
   const emailDiv = document.createElement("div");
