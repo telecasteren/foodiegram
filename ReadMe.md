@@ -79,11 +79,11 @@ npm run tailwind
 **Why _only_ Tailwind?**
 If you don't need the functionality like login and signin,</br> and only want to see and do changes to the design and styling, this is the way.
 
-## ⭐ Contributing
+<!-- ## ⭐ Contributing
 
 You are welcome to contribute to this project.</br>
 Read the explicit guidelines here:
-[CONTRIBUTING.md](docs/CONTRIBUTING.md).
+[CONTRIBUTING.md](docs/CONTRIBUTING.md). -->
 
 ## 👨🏼‍💻 Contact me
 

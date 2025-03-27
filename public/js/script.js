@@ -2,6 +2,7 @@ import setTheme from "/js/utils/theme/colorMode.js";
 import Navbar from "/js/app/components/navbar/navbar.js";
 import Footer from "/js/app/components/footer/footer.js";
 import renderContent from "/js/app/ui/renderContent.js";
+import { userMessage } from "/js/utils/messages/userMessage.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   // RENDER TOP CONTENT:
@@ -13,4 +14,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // RENDER BOTTOM CONTENT:
   Footer();
+
+  // Test userMessage:
+  const error = userMessage("alert", "That didn't work as expected.");
+  document.body.prepend(error);
 });
