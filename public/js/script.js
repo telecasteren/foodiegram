@@ -15,7 +15,6 @@ document.addEventListener("DOMContentLoaded", () => {
   // RENDER BOTTOM CONTENT:
   Footer();
 
-  // Test userMessage:
-  const error = userMessage("alert", "That didn't work as expected.");
-  document.body.prepend(error);
+  // TEST userMessage
+  // userMessage("info", "This is totally crazy.");
 });

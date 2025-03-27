@@ -41,11 +41,5 @@ export function userMessage(type, message) {
   div.appendChild(span);
   div.appendChild(document.createTextNode(message));
 
-  return div;
+  document.body.prepend(div);
 }
-
-// Use examples:
-// const error = userMessage("error", "An error occurred when fetching material.");
-// const alert = userMessage("alert", "Please try again.");
-// document.body.prepend(error);
-// document.body.prepend(alert);

@@ -14,8 +14,9 @@
 
 **General**
 
-- Mobile navbar .active li element updated
-- Check brief
+- Loading indicators:
+  https://flowbite.com/docs/components/skeleton/
+  https://flowbite.com/docs/components/spinner/
 
 **TESTING**
 

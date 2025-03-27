@@ -96,20 +96,17 @@ export default function Navbar() {
     {
       text: "Dashboard",
       href: "/",
-      className:
-        "block py-2 px-3 text-black bg-accent-light rounded-sm dark:bg-accent-dark",
+      className: "mobile-nav-item",
     },
     {
       text: "Feed",
       href: "/user/feed/",
-      className:
-        "block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white",
+      className: "mobile-nav-item",
     },
     {
       text: "Profile",
       href: "/user/profile/",
-      className:
-        "block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white",
+      className: "mobile-nav-item",
     },
   ];
 
@@ -121,6 +118,10 @@ export default function Navbar() {
     a.textContent = item.text;
     li.appendChild(a);
     menuList.appendChild(li);
+
+    if (window.location.pathname === item.href) {
+      a.classList.add("current-mobile-nav-item");
+    }
   });
 
   menuContainer.appendChild(menuList);
@@ -140,7 +141,7 @@ export default function Navbar() {
   window.addEventListener("resize", () => initialUnderline(links));
 
   function handleScreenChange() {
-    if (window.innerWidth >= 778) {
+    if (window.innerWidth > 767) {
       desktopNav.classList.remove("hidden");
       mobileNav.classList.add("hidden");
     } else {
