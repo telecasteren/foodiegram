@@ -3,8 +3,6 @@
 **Feed**
 
 - Sort options: Most recent, Most liked, Most commented
-- Color design on new post form
-- Create new post button styling
 - Posts must link to actual posts and username on posts must link to user profile
 
 **Profile**
