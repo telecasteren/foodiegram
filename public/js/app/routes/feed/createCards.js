@@ -1,23 +1,29 @@
 import { posts } from "/js/utils/source/posts/posts.js";
+import { sortOptions } from "/js/app/components/search/sortOptions.js";
 
 export function createCards() {
   const cardContainer = document.createElement("div");
   cardContainer.className =
     "flex flex-column flex-wrap gap-4 sm:gap-6 lg:gap-12 justify-center m-20";
 
+  const sortWrapper = document.createElement("div");
+  sortWrapper.className = "w-full flex flex-wrap justify-center";
+
+  const sortingMenu = sortOptions();
+  sortWrapper.appendChild(sortingMenu);
+
+  cardContainer.appendChild(sortWrapper);
+
   posts.forEach((post) => {
     const card = document.createElement("div");
     card.setAttribute("data-id", post.id);
-    card.className = `max-w-sm w-80 bg-white border border-gray-200 rounded-md
+    card.className = `user-post max-w-sm w-80 bg-white border border-gray-200 rounded-md
     shadow-sm dark:bg-[#0f0c29] dark:border-none hover:scale-105 transition-transform duration-300`;
 
-    const linkImage = document.createElement("a");
-    linkImage.href = "/user/profile/";
     const image = document.createElement("img");
     image.className = "rounded-t-md w-full h-48 object-cover";
     image.src = post.imgSrc;
     image.alt = post.imgAlt;
-    linkImage.appendChild(image);
 
     const contentDiv = document.createElement("div");
     contentDiv.className = "p-5";
@@ -43,7 +49,7 @@ export function createCards() {
     contentDiv.appendChild(title);
     contentDiv.appendChild(paragraph);
 
-    card.appendChild(linkImage);
+    card.appendChild(image);
     card.appendChild(contentDiv);
 
     cardContainer.appendChild(card);

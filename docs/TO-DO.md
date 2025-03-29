@@ -3,7 +3,6 @@
 **Feed**
 
 - Sort options: Most recent, Most liked, Most commented
-- Posts must link to actual posts and username on posts must link to user profile
 
 **Profile**
 
@@ -18,6 +17,5 @@
 
 **TESTING**
 
-- Click into posts from feed
 - Create posts on feed page
 - Log in as specific users

@@ -38,7 +38,7 @@ export default function SinglePost() {
     const createdDate = dateBadge(
       new Date(post.createdAt),
       "gray-100",
-      "gray-800",
+      "gray-100",
       "gray-500"
     );
     contentDiv.appendChild(createdDate);

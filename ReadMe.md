@@ -17,7 +17,7 @@ Foodiegram is a social media app for "foodies", gathering food lovers from aroun
 ## 🛠 Built With
 
 - **Tailwind CSS** – styles
-- **HTML & CSS** – structure and layout
+- **HTML & CSS** – structure and custom styles
 - **JavaScript** – client-side logic
 - **Node.js & Express.js** – backend routing
 
