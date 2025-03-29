@@ -5,8 +5,9 @@ import SinglePost from "/js/app/routes/profile/post/singlePost.js";
 import { updateUnderline } from "/js/app/components/navbar/updateUnderline.js";
 import { displayAuthForms } from "/js/app/events/authForm/displayAuthForms.js";
 import { createCards } from "/js/app/routes/feed/createCards.js";
-import { newPostBtnEvents } from "/js/app/events/feed/newPostBtnEvents.js";
+import { newPostMenuEvents } from "/js/app/events/feed/newPostMenuEvents.js";
 import { openPost } from "/js/app/events/profile/goToPost.js";
+import { submitPost } from "/js/app/events/feed/createPost/submitPostEvents.js";
 
 export default function renderContent() {
   function renderPage() {
@@ -31,7 +32,8 @@ export default function renderContent() {
           feedContent.innerHTML = "";
           feedContent.prepend(Feed());
           feedContent.appendChild(createCards());
-          newPostBtnEvents();
+          submitPost();
+          newPostMenuEvents();
           openPost();
         }
         break;

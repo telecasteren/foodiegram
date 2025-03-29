@@ -4,7 +4,7 @@ function createNewPost() {
   popUpModal();
 }
 
-export function newPostBtnEvents() {
+export function newPostMenuEvents() {
   const newPostBtn = document.getElementById("create-post");
 
   if (newPostBtn) {

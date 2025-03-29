@@ -3,6 +3,7 @@ import { sortOptions } from "/js/app/components/search/sortOptions.js";
 
 export function createCards() {
   const cardContainer = document.createElement("div");
+  cardContainer.id = "card-container";
   cardContainer.className =
     "flex flex-column flex-wrap gap-4 sm:gap-6 lg:gap-12 justify-center m-20";
 

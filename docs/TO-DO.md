@@ -2,7 +2,7 @@
 
 **Feed**
 
-- Sort options: Most recent, Most liked, Most commented
+- Sort logic for sorting by parameters
 
 **Profile**
 
@@ -14,8 +14,9 @@
 - Loading indicators:
   https://flowbite.com/docs/components/skeleton/
   https://flowbite.com/docs/components/spinner/
+- Saving users and posts to some backend. Firebase?
 
 **TESTING**
 
-- Create posts on feed page
+- Sort posts by newest + save newPost to posts.js
 - Log in as specific users

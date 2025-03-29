@@ -1,4 +1,4 @@
-export default function createPostBtn() {
+export default function newPostMenu() {
   const menuWrapper = document.createElement("div");
   menuWrapper.className = "fixed bottom-6 right-24 group";
 

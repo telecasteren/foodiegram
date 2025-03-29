@@ -2,7 +2,6 @@ import setTheme from "/js/utils/theme/colorMode.js";
 import Navbar from "/js/app/components/navbar/navbar.js";
 import Footer from "/js/app/components/footer/footer.js";
 import renderContent from "/js/app/ui/renderContent.js";
-import { userMessage } from "/js/utils/messages/userMessage.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   // RENDER TOP CONTENT:
@@ -15,6 +14,15 @@ document.addEventListener("DOMContentLoaded", () => {
   // RENDER BOTTOM CONTENT:
   Footer();
 
-  // TEST userMessage
-  // userMessage("info", "This is totally crazy.");
+  // Load posts from localStorage
+  function loadPosts() {
+    const storedPosts = JSON.parse(localStorage.getItem("posts")) || [];
+    const cardContainer = document.getElementById("card-container");
+
+    storedPosts.forEach((post) => {
+      const postCard = createSingleCard(post);
+      cardContainer.appendChild(postCard);
+    });
+  }
+  document.addEventListener("DOMContentLoaded", loadPosts);
 });

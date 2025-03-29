@@ -1,8 +1,10 @@
 import { users } from "/js/utils/source/users/users.js";
 
-const userLookup = Object.fromEntries(users.map((user) => [user.id, user]));
+export const userLookup = Object.fromEntries(
+  users.map((user) => [user.id, user])
+);
 
-export const posts = [
+export let posts = JSON.parse(localStorage.getItem("posts")) || [
   {
     id: 1,
     imgSrc: "/resources/images/rayul-_M6gy9oHgII-unsplash.webp",

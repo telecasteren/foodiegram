@@ -42,6 +42,7 @@ export default function newPost() {
     if (file) {
       const imageUrl = URL.createObjectURL(file);
       postImage.src = imageUrl;
+      postImage.alt = "New post-image";
       postImage.classList.remove("hidden");
       imgInput.classList.add("hidden");
     }
@@ -51,12 +52,25 @@ export default function newPost() {
   uploadWrapper.appendChild(imgInput);
   uploadWrapper.appendChild(helpText);
 
+  const titleWrapper = document.createElement("div");
+
+  const titleLabel = document.createElement("label");
+  titleLabel.className = "block mb-2 text-sm font-medium text-gray-900";
+  titleLabel.setAttribute("for", "title");
+  titleLabel.textContent = "Title:";
+
+  const title = document.createElement("input");
+  title.className = `${sharedStyles} p-2`;
+  title.id = "title";
+  title.setAttribute("Type", "text");
+  title.maxLength = "20";
+
   const captionWrapper = document.createElement("div");
 
   const captionLabel = document.createElement("label");
   captionLabel.className = "block mb-2 text-sm font-medium text-gray-900";
   captionLabel.setAttribute("for", "caption");
-  captionLabel.textContent = "Post caption:";
+  captionLabel.textContent = "Caption:";
 
   const caption = document.createElement("textarea");
   caption.name = "caption";
@@ -67,11 +81,15 @@ export default function newPost() {
 
   grid.appendChild(uploadWrapper);
   grid.appendChild(postImage);
+  titleWrapper.appendChild(titleLabel);
+  titleWrapper.appendChild(title);
   captionWrapper.appendChild(captionLabel);
   captionWrapper.appendChild(caption);
+  grid.appendChild(titleWrapper);
   grid.appendChild(captionWrapper);
 
   const submitButton = document.createElement("button");
+  submitButton.id = "submit-btn";
   submitButton.type = "submit";
   submitButton.className = `text-text-light inline-flex items-center
   bg-accent-light dark:bg-accent-dark hover:brightness-110 focus:ring-2 focus:outline-none focus:ring-blue-300
