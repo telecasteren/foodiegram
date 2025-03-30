@@ -8,6 +8,8 @@ import { createCards } from "/js/app/routes/feed/createCards.js";
 import { newPostMenuEvents } from "/js/app/events/feed/newPostMenuEvents.js";
 import { openPost } from "/js/app/events/profile/goToPost.js";
 import { submitPost } from "/js/app/events/feed/createPost/submitPostEvents.js";
+import { createSkeletonCard } from "/js/app/components/loader/skeletonCard.js";
+import { createSkeletonProfile } from "/js/app/components/loader/skeletonProfile.js";
 
 export default function renderContent() {
   function renderPage() {
@@ -29,19 +31,29 @@ export default function renderContent() {
         break;
       case "/user/feed/":
         if (feedContent) {
-          feedContent.innerHTML = "";
-          feedContent.prepend(Feed());
-          feedContent.appendChild(createCards());
-          submitPost();
-          newPostMenuEvents();
-          openPost();
+          const loader = createSkeletonCard();
+          feedContent.appendChild(loader);
+
+          setTimeout(() => {
+            feedContent.innerHTML = "";
+            feedContent.prepend(Feed());
+            feedContent.appendChild(createCards());
+            submitPost();
+            newPostMenuEvents();
+            openPost();
+          }, 1000);
         }
         break;
       case "/user/profile/":
         if (profileContent) {
-          profileContent.innerHTML = "";
-          profileContent.appendChild(Profile());
-          openPost();
+          const loader = createSkeletonProfile();
+          profileContent.appendChild(loader);
+
+          setTimeout(() => {
+            profileContent.innerHTML = "";
+            profileContent.appendChild(Profile());
+            openPost();
+          }, 1000);
         }
         break;
       case "/user/post/":

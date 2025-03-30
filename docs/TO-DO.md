@@ -18,5 +18,4 @@
 
 **TESTING**
 
-- Sort posts by newest + save newPost to posts.js
 - Log in as specific users

@@ -79,11 +79,11 @@ npm run tailwind
 **Why _only_ Tailwind?**
 If you don't need the functionality like login and signin,</br> and only want to see and do changes to the design and styling, this is the way.
 
-<!-- ## ⭐ Contributing
+## ⭐ Contributing
 
-You are welcome to contribute to this project.</br>
-Read the explicit guidelines here:
-[CONTRIBUTING.md](docs/CONTRIBUTING.md). -->
+Right now I'm not looking for contributors, as this is a school project.</br>
+When contributing becomes available, see guidelines and more about it here:
+[CONTRIBUTING.md](docs/CONTRIBUTING.md).
 
 ## 👨🏼‍💻 Contact me
 
@@ -99,4 +99,19 @@ Under no licence p.t.
 
 ## Acknowledgments
 
-This is where you can add any acknowledgements if you'd like, such as to people who have helped you or any code snippets you'd like to mention. You can delete this section if you don't have any acknowledgements to make.
+- ChatGPT for text content in titles and captions on posts.
+
+#### Under a free licence on Unsplash for images by:
+
+- rayul-\_M6gy9oHgII-unsplash.webp</br>
+- chad-montano--GFCYhoRe48-unsplash.jpg</br>
+- casey-lee-awj7sRviVXo-unsplash.jpg</br>
+- brooke-lark-1Rm9GLHV0UA-unsplash.jpg</br>
+- anh-nguyen-kcA-c3f_3FE-unsplash.jpg</br>
+- adam-jaime-dmkmrNptMpw-unsplash.jpg</br>
+- toa-heftiba-O3ymvT7Wf9U-unsplash.jpg</br>
+- rafaella-mendes-diniz-et_78QkMMQs-unsplash.jpg</br>
+- jeremy-bishop-\_CFv3bntQlQ-unsplash.jpg</br>
+- ivana-cajina-\_7LbC5J-jw4-unsplash.jpg</br>
+- ian-dooley-d1UPkiFd04A-unsplash.jpg</br>
+- ayo-ogunseinde-6W4F62sN_yI-unsplash.jpg
