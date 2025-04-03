@@ -1,12 +1,12 @@
 export function createSkeletonCard() {
   const loaderContainer = document.createElement("div");
   loaderContainer.setAttribute("role", "status");
-  loaderContainer.className =
-    "max-w-sm p-4 border border-gray-200 rounded-sm shadow-sm animate-pulse md:p-6 dark:border-gray-700";
+  loaderContainer.className = `max-w-sm p-4 border border-gray-200 rounded-md
+  shadow-sm animate-pulse md:p-6 dark:border-gray-700`;
 
   const imagePlaceholder = document.createElement("div");
   imagePlaceholder.className =
-    "flex items-center justify-center h-48 mb-4 bg-gray-300 rounded-sm dark:bg-gray-700";
+    "flex items-center justify-center h-48 mb-4 bg-gray-300 rounded-md dark:bg-bg-dark3";
 
   const svgIcon1 = document.createElementNS(
     "http://www.w3.org/2000/svg",
@@ -36,18 +36,18 @@ export function createSkeletonCard() {
 
   const textPlaceholder1 = document.createElement("div");
   textPlaceholder1.className =
-    "h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-48 mb-4";
+    "h-2.5 bg-gray-200 rounded-full dark:bg-bg-dark3 w-48 mb-4";
 
   const textPlaceholder2 = document.createElement("div");
   textPlaceholder2.className =
-    "h-2 bg-gray-200 rounded-full dark:bg-gray-700 mb-2.5";
+    "h-2 bg-gray-200 rounded-full dark:bg-bg-dark3 mb-2.5";
 
   const textPlaceholder3 = document.createElement("div");
   textPlaceholder3.className =
-    "h-2 bg-gray-200 rounded-full dark:bg-gray-700 mb-2.5";
+    "h-2 bg-gray-200 rounded-full dark:bg-bg-dark3 mb-2.5";
 
   const textPlaceholder4 = document.createElement("div");
-  textPlaceholder4.className = "h-2 bg-gray-200 rounded-full dark:bg-gray-700";
+  textPlaceholder4.className = "h-2 bg-gray-200 rounded-full dark:bg-bg-dark3";
 
   const flexContainer = document.createElement("div");
   flexContainer.className = "flex items-center mt-4";
@@ -58,7 +58,7 @@ export function createSkeletonCard() {
   );
   svgIcon2.setAttribute(
     "class",
-    "w-10 h-10 me-3 text-gray-200 dark:text-gray-700"
+    "w-10 h-10 me-3 text-gray-200 dark:text-bg-dark3"
   );
   svgIcon2.setAttribute("aria-hidden", "true");
   svgIcon2.setAttribute("xmlns", "http://www.w3.org/2000/svg");
@@ -77,11 +77,11 @@ export function createSkeletonCard() {
 
   const textPlaceholder5 = document.createElement("div");
   textPlaceholder5.className =
-    "h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-32 mb-2";
+    "h-2.5 bg-gray-200 rounded-full dark:bg-bg-dark3 w-32 mb-2";
 
   const textPlaceholder6 = document.createElement("div");
   textPlaceholder6.className =
-    "w-48 h-2 bg-gray-200 rounded-full dark:bg-gray-700";
+    "w-48 h-2 bg-gray-200 rounded-full dark:bg-bg-dark3";
 
   textContainer.appendChild(textPlaceholder5);
   textContainer.appendChild(textPlaceholder6);

@@ -31,8 +31,9 @@ export default function renderContent() {
         break;
       case "/user/feed/":
         if (feedContent) {
-          const loader = createSkeletonCard();
-          feedContent.appendChild(loader);
+          for (let i = 0; i < 3; i++) {
+            feedContent.appendChild(createSkeletonCard());
+          }
 
           setTimeout(() => {
             feedContent.innerHTML = "";
@@ -46,8 +47,7 @@ export default function renderContent() {
         break;
       case "/user/profile/":
         if (profileContent) {
-          const loader = createSkeletonProfile();
-          profileContent.appendChild(loader);
+          profileContent.appendChild(createSkeletonProfile());
 
           setTimeout(() => {
             profileContent.innerHTML = "";

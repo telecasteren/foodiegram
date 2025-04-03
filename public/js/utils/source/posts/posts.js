@@ -7,7 +7,7 @@ export const userLookup = Object.fromEntries(
 export let posts = JSON.parse(localStorage.getItem("posts")) || [
   {
     id: 1,
-    imgSrc: "/resources/images/rayul-_M6gy9oHgII-unsplash.webp",
+    imgSrc: "/resources/images/posts/rayul-_M6gy9oHgII-unsplash.webp",
     imgAlt: "rayul-_M6gy9oHgII-unsplash",
     title: "Travel for food in 2025",
     caption: "When food meets plate, pizza is my date.",
@@ -38,7 +38,7 @@ export let posts = JSON.parse(localStorage.getItem("posts")) || [
   {
     id: 2,
     title: "The Ultimate Burger Experience",
-    imgSrc: "/resources/images/chad-montano--GFCYhoRe48-unsplash.jpg",
+    imgSrc: "/resources/images/posts/chad-montano--GFCYhoRe48-unsplash.jpg",
     imgAlt: "chad-montano--GFCYhoRe48-unsplash",
     caption: "Juicy, cheesy, and absolutely delicious!",
     text: "From classic cheeseburgers to gourmet creations, the world of burgers is as diverse as it is mouthwatering.",
@@ -60,7 +60,7 @@ export let posts = JSON.parse(localStorage.getItem("posts")) || [
   {
     id: 3,
     title: "Savoring the Best Ramen Bowls",
-    imgSrc: "/resources/images/casey-lee-awj7sRviVXo-unsplash.jpg",
+    imgSrc: "/resources/images/posts/casey-lee-awj7sRviVXo-unsplash.jpg",
     imgAlt: "casey-lee-awj7sRviVXo-unsplash",
     caption: "A warm hug in a bowl of noodles and broth.",
     text: "Whether it's tonkotsu, miso, or shoyu, ramen is the ultimate comfort food that brings people together.",
@@ -82,7 +82,7 @@ export let posts = JSON.parse(localStorage.getItem("posts")) || [
   {
     id: 4,
     title: "The Art of Baking Perfection",
-    imgSrc: "/resources/images/brooke-lark-1Rm9GLHV0UA-unsplash.jpg",
+    imgSrc: "/resources/images/posts/brooke-lark-1Rm9GLHV0UA-unsplash.jpg",
     imgAlt: "brooke-lark-1Rm9GLHV0UA-unsplash",
     caption: "Sweet treats that melt in your mouth!",
     text: "From croissants to cupcakes, the world of baking is filled with endless possibilities for delightful indulgence.",
@@ -104,7 +104,7 @@ export let posts = JSON.parse(localStorage.getItem("posts")) || [
   {
     id: 5,
     title: "Exotic Fruits You Must Try",
-    imgSrc: "/resources/images/anh-nguyen-kcA-c3f_3FE-unsplash.jpg",
+    imgSrc: "/resources/images/posts/anh-nguyen-kcA-c3f_3FE-unsplash.jpg",
     imgAlt: "anh-nguyen-kcA-c3f_3FE-unsplash",
     caption: "Nature's sweetest gifts in vibrant colors.",
     text: "From dragon fruit to mangosteen, these exotic fruits are as delicious as they are beautiful.",
@@ -117,7 +117,7 @@ export let posts = JSON.parse(localStorage.getItem("posts")) || [
   {
     id: 6,
     title: "Old Fashioned Happiness",
-    imgSrc: "/resources/images/adam-jaime-dmkmrNptMpw-unsplash.jpg",
+    imgSrc: "/resources/images/posts/adam-jaime-dmkmrNptMpw-unsplash.jpg",
     imgAlt: "adam-jaime-dmkmrNptMpw-unsplash",
     caption: "Bitter, spice and everything nice!",
     text: "A traditional experience enhanced with citrus and cinnamon.",

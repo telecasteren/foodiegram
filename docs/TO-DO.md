@@ -12,7 +12,6 @@
 **General**
 
 - Loading indicators:
-  https://flowbite.com/docs/components/skeleton/
   https://flowbite.com/docs/components/spinner/
 - Saving users and posts to some backend. Firebase?
 

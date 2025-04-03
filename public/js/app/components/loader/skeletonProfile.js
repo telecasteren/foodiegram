@@ -1,15 +1,15 @@
 export function createSkeletonProfile() {
   const loaderContainer = document.createElement("div");
   loaderContainer.setAttribute("role", "status");
-  loaderContainer.className = "animate-pulse";
+  loaderContainer.className = "animate-pulse w-full p-5 mt-20 md:mt-40";
 
   const bar1 = document.createElement("div");
   bar1.className =
-    "h-2.5 bg-gray-300 rounded-full dark:bg-gray-700 max-w-[640px] mb-2.5 mx-auto";
+    "h-2.5 bg-gray-300 rounded-full dark:bg-bg-dark3 max-w-[640px] md:w-[840px] mb-2.5 mx-auto";
 
   const bar2 = document.createElement("div");
   bar2.className =
-    "h-2.5 mx-auto bg-gray-300 rounded-full dark:bg-gray-700 max-w-[540px]";
+    "h-2.5 mx-auto bg-gray-300 rounded-full dark:bg-bg-dark3 max-w-[540px] md:w-[740px]";
 
   const flexContainer = document.createElement("div");
   flexContainer.className = "flex items-center justify-center mt-4";
@@ -17,7 +17,7 @@ export function createSkeletonProfile() {
   const svgIcon = document.createElementNS("http://www.w3.org/2000/svg", "svg");
   svgIcon.setAttribute(
     "class",
-    "w-8 h-8 text-gray-200 dark:text-gray-700 me-4"
+    "w-8 h-8 text-gray-200 dark:text-bg-dark3 me-4"
   );
   svgIcon.setAttribute("aria-hidden", "true");
   svgIcon.setAttribute("xmlns", "http://www.w3.org/2000/svg");
@@ -32,10 +32,11 @@ export function createSkeletonProfile() {
   svgIcon.appendChild(path);
 
   const bar3 = document.createElement("div");
-  bar3.className = "w-20 h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 me-3";
+  bar3.className =
+    "w-20 md:w-40 h-2.5 bg-gray-200 rounded-full dark:bg-bg-dark3 me-3";
 
   const bar4 = document.createElement("div");
-  bar4.className = "w-24 h-2 bg-gray-200 rounded-full dark:bg-gray-700";
+  bar4.className = "w-24 md:w-48 h-2 bg-gray-200 rounded-full dark:bg-bg-dark3";
 
   const srText = document.createElement("span");
   srText.className = "sr-only";

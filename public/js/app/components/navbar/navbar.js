@@ -112,6 +112,7 @@ export default function Navbar() {
 
   menuItems.forEach((item) => {
     const li = document.createElement("li");
+    li.className = "menuLi";
     const a = document.createElement("a");
     a.href = item.href;
     a.className = item.className;

@@ -2,7 +2,6 @@ import { userMessage } from "/js/utils/messages/userMessage.js";
 import { createSingleCard } from "/js/app/routes/feed/cards/createSingleCard.js";
 import { posts } from "/js/utils/source/posts/posts.js";
 import { userLookup } from "/js/utils/source/posts/posts.js";
-import { openPost } from "/js/app/events/profile/goToPost.js";
 
 export function submitPost() {
   const submitBtn = document.getElementById("submit-btn");
@@ -12,7 +11,6 @@ export function submitPost() {
 
   submitBtn.removeEventListener("click", submitHandler);
   submitBtn.addEventListener("click", submitHandler);
-  submitBtn.addEventListener("click", openPost);
 }
 
 function submitHandler(event) {
@@ -46,15 +44,13 @@ function submitHandler(event) {
           caption: caption.value.trim(),
           text: 0,
           likes: 0,
-          username: userLookup[5].username || "Unknown user",
+          username: userLookup[3].username || "Unknown user",
           userId: 5,
           createdAt: new Date(),
           comments: [],
         };
         posts.unshift(newPost);
         localStorage.setItem("posts", JSON.stringify(posts));
-
-        console.log("Saved to localStorage:", localStorage.getItem("posts"));
 
         const cardContainer = document.getElementById("card-container");
         if (!cardContainer) {

@@ -2,6 +2,7 @@ import setTheme from "/js/utils/theme/colorMode.js";
 import Navbar from "/js/app/components/navbar/navbar.js";
 import Footer from "/js/app/components/footer/footer.js";
 import renderContent from "/js/app/ui/renderContent.js";
+import { createSingleCard } from "/js/app/routes/feed/cards/createSingleCard.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   // RENDER TOP CONTENT:

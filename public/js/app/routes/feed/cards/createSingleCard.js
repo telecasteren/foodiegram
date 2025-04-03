@@ -1,6 +1,4 @@
 export function createSingleCard(post) {
-  console.log("Creating card for:", post);
-
   const card = document.createElement("div");
   card.setAttribute("data-id", post.id);
   card.className = `user-post max-w-sm w-80 bg-white border border-gray-200 rounded-md

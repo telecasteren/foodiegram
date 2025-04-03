@@ -4,8 +4,7 @@ export default function newPostMenu() {
 
   const menu = document.createElement("div");
   menu.id = "speed-dial-menu-dropdown";
-  menu.className = `flex flex-col justify-end hidden
-  py-1 mb-4 bg-white border border-gray-100 rounded-lg shadow-xs dark:bg-gray-700 dark:border-gray-600`;
+  menu.className = `flex flex-col justify-end hidden mb-4 bg-white border border-gray-100 rounded-lg shadow-xs dark:bg-gray-700 dark:border-gray-600`;
 
   const ul = document.createElement("ul");
   ul.className = "text-sm text-gray-500 dark:text-gray-300";
@@ -13,8 +12,8 @@ export default function newPostMenu() {
   const li = document.createElement("li");
   const a = document.createElement("a");
   a.href = "#";
-  a.className = `flex items-center px-12 py-8 bg-white border border-accent-light
-  rounded-md shadow-sm hover:text-gray-900 hover:bg-gray-100 dark:bg-[#0f0c29]
+  a.className = `flex items-center px-8 py-4 bg-white border border-accent-light
+  rounded-md shadow-sm text-lg hover:text-gray-900 hover:bg-gray-100 dark:bg-[#0f0c29]
   dark:border-accent-dark dark:hover:bg-gray-600 dark:hover:text-white`;
 
   a.appendChild(document.createTextNode("Create new post."));
@@ -31,7 +30,7 @@ export default function newPostMenu() {
   text-white bg-accent-light rounded-full w-16 h-16 hover:brightness-110 dark:bg-accent-dark`;
 
   const buttonIcon = document.createElement("p");
-  buttonIcon.className = "font-medium text-bigger dark:text-bg-dark1";
+  buttonIcon.className = "font-medium text-bigger mb-2 dark:text-bg-dark1";
   buttonIcon.innerText = "+";
   button.appendChild(buttonIcon);
 
