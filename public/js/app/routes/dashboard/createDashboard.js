@@ -1,5 +1,6 @@
-import { createTitle } from "/js/app/components/pageTitle/title.js";
+import { typeTitle } from "/js/app/components/pageTitle/typeTitle.js";
 import createButton from "/js/app/components/buttons/primaryBtn.js";
+import Widget from "/js/app/routes/dashboard/widget/widget.js";
 
 export default function Dashboard() {
   const dashboardContainer = document.createElement("div");
@@ -7,16 +8,15 @@ export default function Dashboard() {
     "dashboard-container justify-items-center min-h-screen p-8 gap-16";
 
   const header = document.createElement("header");
-  const title = createTitle("FOODIEGRAM.");
-  title.hidden = true;
-
-  const logo = document.createElement("img");
-  logo.className = "mb-10 w-94";
-  logo.src = "/resources/logo/foodiegram-logo-pizza.png";
-  logo.alt = "Official Foodiegram logo";
+  const title = typeTitle("FOODIEGRAM");
+  title.className = "text-[4.5rem] typewriter";
   header.appendChild(title);
-  header.appendChild(logo);
 
+  const contentContainer = document.createElement("div");
+  contentContainer.className =
+    "grid grid-cols-2 justify-center items-center gap-6 mt-16";
+
+  const buttonContainer = document.createElement("div");
   const loginBtn = createButton({
     text: "Log in.",
     href: "#",
@@ -34,10 +34,15 @@ export default function Dashboard() {
   signupBtn.id = "signupBtn";
   signupBtn.classList.add("btn-secondary");
   signupBtn.addEventListener("click", (e) => e.preventDefault());
+  buttonContainer.appendChild(loginBtn);
+  buttonContainer.appendChild(signupBtn);
 
+  const wedgy = Widget();
+
+  contentContainer.appendChild(buttonContainer);
+  contentContainer.appendChild(wedgy);
   dashboardContainer.appendChild(header);
-  dashboardContainer.appendChild(loginBtn);
-  dashboardContainer.appendChild(signupBtn);
+  dashboardContainer.appendChild(contentContainer);
 
   return dashboardContainer;
 }

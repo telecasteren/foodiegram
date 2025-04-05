@@ -6,7 +6,7 @@ export const users = [
     email: "j.craig@email.com",
     password: "",
     description: "Born in Rome, travelling for food.",
-    avatarSrc: "/resources/images/rayul-_M6gy9oHgII-unsplash.webp",
+    avatarSrc: "/resources/images/avatars/rayul-_M6gy9oHgII-unsplash.webp",
     avatarAlt: "rayul-_M6gy9oHgII-unsplash",
     followers: "201",
     following: "34",

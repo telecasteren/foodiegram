@@ -2,7 +2,7 @@
 
 ![image](public/resources/images/screenshot.webp)
 
-A social media application.
+**A social media application.**
 
 ## Description
 
@@ -10,9 +10,10 @@ Foodiegram is a social media app for "foodies", gathering food lovers from aroun
 
 ## 🚀 Features
 
-- **User Authentication** – Create an account and log in securely.
-- **Feed & Posts** – View and create food-related posts.
-- **Profile Management** – Update your profile and see your past posts.
+- **Feed & Posts** – View and create posts.
+- **User Authentication** – Create an account and log in securely. _(COMING)_
+- **Profile Management** – Update your profile and see your list of posts. _(COMING)_
+- **DM's and messaging** – Send and receive messages between users. _(COMING)_
 
 ## 🛠 Built With
 
@@ -68,7 +69,7 @@ npm run dev
 You will see this in the console outcome:</br>
 _Server is running on http://localhost:5500_
 
-Now, open it in your preferred browser window and get to testing!
+Now, open it in your preferred browser and get to testing!
 
 **Alternatively, run _only_ Tailwind**
 
@@ -77,11 +78,11 @@ npm run tailwind
 ```
 
 **Why _only_ Tailwind?**
-If you don't need the functionality like login and signin,</br> and only want to see and do changes to the design and styling, this is the way.
+If you don't need the functionality like login/signin,</br> and only want to see and do changes to the design and styling, this is the way.
 
 ## ⭐ Contributing
 
-Right now I'm not looking for contributors, as this is a school project.</br>
+**Right now I'm not looking for contributors, as this is a school project.**</br>
 When contributing becomes available, see guidelines and more about it here:
 [CONTRIBUTING.md](docs/CONTRIBUTING.md).
 
@@ -97,9 +98,9 @@ LinkedIn [Tele Caster Nilsen](www.linkedin.com/in/tele-caster-nilsen-7002b9249)
 
 Under no licence p.t.
 
-## Acknowledgments
+## 🫶 Acknowledgments
 
-- ChatGPT for text content in titles and captions on posts.
+- ChatGPT for text content in some of the titles and post captions.
 
 #### Under a free licence on Unsplash for images by:
 
@@ -115,3 +116,7 @@ Under no licence p.t.
 - ivana-cajina-\_7LbC5J-jw4-unsplash.jpg</br>
 - ian-dooley-d1UPkiFd04A-unsplash.jpg</br>
 - ayo-ogunseinde-6W4F62sN_yI-unsplash.jpg
+
+### ℹ️ Resources
+
+[Typewriter effect](https://css-tricks.com/snippets/css/typewriter-effect/)
