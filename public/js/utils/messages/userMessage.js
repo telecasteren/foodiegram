@@ -1,4 +1,9 @@
 export function userMessage(type, message) {
+  const existingAlert = document.querySelector(".user-message");
+  if (existingAlert) {
+    existingAlert.remove();
+  }
+
   const alertTypes = {
     info: {
       text: "text-blue-800",
@@ -31,7 +36,7 @@ export function userMessage(type, message) {
 
   const div = document.createElement("div");
   div.setAttribute("role", "alert");
-  div.className = `fixed top-5 left-1/2 transform -translate-x-1/2 w-96 p-4 mb-4
+  div.className = `user-message fixed top-5 left-1/2 transform -translate-x-1/2 w-96 p-4 mb-4
   text-sm ${text} text-center rounded-lg ${bg} dark:bg-gray-800 ${darkText} shadow-lg z-50`;
 
   const span = document.createElement("span");
@@ -40,6 +45,16 @@ export function userMessage(type, message) {
 
   div.appendChild(span);
   div.appendChild(document.createTextNode(message));
-
   document.body.prepend(div);
+
+  function closeAlert(event) {
+    if (!div.contains(event.target)) {
+      div.remove();
+      document.removeEventListener("click", closeAlert);
+    }
+  }
+
+  setTimeout(() => {
+    document.addEventListener("click", closeAlert);
+  }, 500);
 }

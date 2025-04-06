@@ -42,7 +42,7 @@ const users = [
     followers: "80",
     following: "78",
     posts: {
-      numberOf: "",
+      numberOf: "201",
     },
   },
   {
@@ -57,7 +57,7 @@ const users = [
     followers: "340K",
     following: "1439",
     posts: {
-      numberOf: "",
+      numberOf: "168",
     },
   },
   {
@@ -73,7 +73,7 @@ const users = [
     followers: "1.2M",
     following: "22",
     posts: {
-      numberOf: "",
+      numberOf: "492",
     },
   },
   {
@@ -89,7 +89,7 @@ const users = [
     followers: "24",
     following: "51",
     posts: {
-      numberOf: "",
+      numberOf: "1207",
     },
   },
 ];

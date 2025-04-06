@@ -12,7 +12,7 @@ export function createSkeletonCard() {
     "http://www.w3.org/2000/svg",
     "svg"
   );
-  svgIcon1.setAttribute("class", "w-10 h-10 text-gray-200 dark:text-gray-600");
+  svgIcon1.setAttribute("class", "w-10 h-10 text-gray-200 dark:text-bg-dark2");
   svgIcon1.setAttribute("aria-hidden", "true");
   svgIcon1.setAttribute("xmlns", "http://www.w3.org/2000/svg");
   svgIcon1.setAttribute("fill", "currentColor");

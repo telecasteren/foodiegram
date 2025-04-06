@@ -35,7 +35,7 @@ export default function SinglePost() {
   authorIMG.alt = postAuthor.avatarAlt;
 
   const linkTitle = document.createElement("a");
-  linkTitle.href = "/user/profile/";
+  linkTitle.href = `/user/profile/?id=${post.userId}`;
   const authorName = document.createElement("h5");
   authorName.setAttribute("data-userId", postAuthor.id);
   authorName.className = `text-2xl tracking-tight text-gray-900 dark:text-gray-200

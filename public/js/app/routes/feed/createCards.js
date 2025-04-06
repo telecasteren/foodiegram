@@ -22,7 +22,7 @@ export function createCards() {
     shadow-sm dark:bg-[#0f0c29] dark:border-none hover:scale-105 transition-transform duration-300`;
 
     const image = document.createElement("img");
-    image.className = "rounded-t-md w-full h-48 object-cover";
+    image.className = `rounded-t-md w-full h-48 object-cover cursor-pointer`;
     image.src = post.imgSrc;
     image.alt = post.imgAlt;
 
@@ -32,8 +32,8 @@ export function createCards() {
     const linkTitle = document.createElement("a");
     linkTitle.href = `/user/profile/?id=${post.userId}`;
     const authorName = document.createElement("h5");
-    authorName.className =
-      "mb-2 text-2xl font-bold tracking-tight text-accent-light dark:text-accent-dark hover:text-gray-900 hover:dark:text-gray-200";
+    authorName.className = `mb-2 text-2xl font-bold tracking-tight text-accent-light
+    dark:text-accent-dark hover:text-gray-900 hover:dark:text-gray-200`;
     authorName.textContent = post.username;
     linkTitle.appendChild(authorName);
 

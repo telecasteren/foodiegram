@@ -20,7 +20,19 @@ export default function Description() {
     newTab: false,
   });
   followBtn.classList.add("btn-secondary", "justify-self-center");
-  followBtn.addEventListener("click", (e) => e.preventDefault());
+
+  let isFollowing = false;
+  followBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+
+    if (!isFollowing) {
+      userMessage("success", `You started following: ${user.username}`);
+    } else {
+      userMessage("info", `You stopped following: ${user.username}`);
+    }
+
+    isFollowing = !isFollowing;
+  });
 
   userDescription.appendChild(description);
   userDescription.appendChild(followBtn);
