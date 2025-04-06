@@ -1,6 +1,5 @@
-import { typeTitle } from "/js/app/components/pageTitle/typeTitle.js";
+import { typeTitle, typeText } from "/js/app/components/titles/typewriter.js";
 import createButton from "/js/app/components/buttons/primaryBtn.js";
-import Widget from "/js/app/routes/dashboard/widget/widget.js";
 
 export default function Dashboard() {
   const dashboardContainer = document.createElement("div");
@@ -9,14 +8,22 @@ export default function Dashboard() {
 
   const header = document.createElement("header");
   const title = typeTitle("FOODIEGRAM");
-  title.className = "text-[4.5rem] typewriter";
+  title.classList.add("text-bigger", "md:text-[4.5rem]", "typewriter");
   header.appendChild(title);
 
   const contentContainer = document.createElement("div");
-  contentContainer.className =
-    "grid grid-cols-2 justify-center items-center gap-6 mt-16";
+  contentContainer.className = "justify-center items-center m-2 h-[50px]";
 
-  const buttonContainer = document.createElement("div");
+  const logoIcon = document.createElement("img");
+  logoIcon.className = "w-18 h-18";
+  logoIcon.src = "/resources/logo/logo-pizza.png";
+  logoIcon.alt = "Logo icon of a Pizza character";
+
+  setTimeout(() => {
+    const caption = typeText();
+    contentContainer.appendChild(caption);
+  }, 2000);
+
   const loginBtn = createButton({
     text: "Log in.",
     href: "#",
@@ -34,15 +41,13 @@ export default function Dashboard() {
   signupBtn.id = "signupBtn";
   signupBtn.classList.add("btn-secondary");
   signupBtn.addEventListener("click", (e) => e.preventDefault());
-  buttonContainer.appendChild(loginBtn);
-  buttonContainer.appendChild(signupBtn);
 
-  const wedgy = Widget();
-
-  contentContainer.appendChild(buttonContainer);
-  contentContainer.appendChild(wedgy);
   dashboardContainer.appendChild(header);
+  dashboardContainer.appendChild(logoIcon);
   dashboardContainer.appendChild(contentContainer);
+
+  dashboardContainer.appendChild(loginBtn);
+  dashboardContainer.appendChild(signupBtn);
 
   return dashboardContainer;
 }

@@ -1,4 +1,4 @@
-import { createTitle } from "/js/app/components/pageTitle/title.js";
+import { createTitle } from "/js/app/components/titles/title.js";
 import { users } from "/js/utils/source/users/users.js";
 
 export default function Heading() {
@@ -7,7 +7,13 @@ export default function Heading() {
   const user = users[userIndex];
 
   const userHeading = document.createElement("div");
-  userHeading.className = "flex flex-wrap justify-center items-center gap-2";
+  userHeading.classList.add(
+    "flex",
+    "flex-wrap",
+    "justify-center",
+    "items-center",
+    "gap-2"
+  );
 
   const username = createTitle(user.username);
   username.className = "text-bigger m-4";

@@ -30,7 +30,7 @@ export default function newPostMenu() {
   text-white bg-accent-light rounded-full w-16 h-16 hover:brightness-110 dark:bg-accent-dark`;
 
   const buttonIcon = document.createElement("p");
-  buttonIcon.className = "font-medium text-bigger mb-2 dark:text-bg-dark1";
+  buttonIcon.className = "font-medium text-bigger dark:text-bg-dark1";
   buttonIcon.innerText = "+";
   button.appendChild(buttonIcon);
 

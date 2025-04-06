@@ -3,7 +3,6 @@
   border-right: 0.1em solid var(--typewriter);
   white-space: nowrap;
   margin: 0 auto;
-  letter-spacing: 0.5rem;
   animation: typing steps(1), blink-caret 0.75s step-end infinite;
 }
 
