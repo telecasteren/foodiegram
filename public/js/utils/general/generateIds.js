@@ -1,4 +1,5 @@
-// Simulate MongoDB's ObjectId to create unique id's
+// NOT IN USE ATM
+// Simulates MongoDB's ObjectId to create unique id's
 export function generateObjectId() {
   return (
     Math.floor(Date.now() / 1000).toString(16) +

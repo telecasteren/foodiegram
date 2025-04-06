@@ -1,5 +1,4 @@
 import { posts } from "/js/utils/source/posts/posts.js";
-// import { users } from "/js/utils/source/users/users.js";
 
 const postsLookup = posts.reduce((acc, post) => {
   if (!acc[post.userId]) {

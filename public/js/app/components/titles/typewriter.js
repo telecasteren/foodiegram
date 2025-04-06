@@ -1,6 +1,6 @@
 export function typeTitle(text) {
   const title = document.createElement("h1");
-  title.className = "text-center dark:text-darkText font-brand";
+  title.className = "text-center font-brand";
 
   const dot = document.createElement("span");
   dot.style.color = "var(--accent)";
@@ -28,12 +28,12 @@ export function typeTitle(text) {
 
 export function typeText() {
   const title = document.createElement("h2");
-  title.className = "text-center dark:text-darkText font-typewriter typewriter";
+  title.className = "text-center font-typewriter typewriter";
 
   const texts = [
     "Want to experience the world of food?",
     "Got any favourite food spots to share?",
-    "Connect with fellow foodies from around the world!",
+    "Connect for a slice of life!",
   ];
 
   let textIndex = 0;
@@ -48,24 +48,24 @@ export function typeText() {
 
     if (!isErasing && charIndex < currentText.length) {
       charIndex++;
-      setTimeout(typeEffect, 100);
+      setTimeout(typeEffect, 80);
     } else if (isErasing && charIndex > 0) {
       charIndex--;
-      setTimeout(typeEffect, 50);
+      setTimeout(typeEffect, 30);
     } else {
       if (!isErasing) {
         if (textIndex === texts.length - 1) {
           return;
         }
         isErasing = true;
-        setTimeout(typeEffect, 1000);
+        setTimeout(typeEffect, 2000);
       } else {
         if (textIndex === texts.length - 1) {
           return;
         }
         isErasing = false;
         textIndex++;
-        setTimeout(typeEffect, 500);
+        setTimeout(typeEffect, 400);
       }
     }
   }

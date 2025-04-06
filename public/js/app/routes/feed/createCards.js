@@ -30,7 +30,7 @@ export function createCards() {
     contentDiv.className = "p-5";
 
     const linkTitle = document.createElement("a");
-    linkTitle.href = "/user/profile/";
+    linkTitle.href = `/user/profile/?id=${post.userId}`;
     const authorName = document.createElement("h5");
     authorName.className =
       "mb-2 text-2xl font-bold tracking-tight text-accent-light dark:text-accent-dark hover:text-gray-900 hover:dark:text-gray-200";

@@ -119,4 +119,5 @@ Under no licence p.t.
 
 ### ℹ️ Resources
 
-[Typewriter effect](https://css-tricks.com/snippets/css/typewriter-effect/)
+[Typewriter effect](https://css-tricks.com/snippets/css/typewriter-effect/)</br>
+[Typewriter library](https://www.typeitjs.com/)

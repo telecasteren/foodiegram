@@ -1,7 +1,7 @@
 import { userMessage } from "/js/utils/messages/userMessage.js";
 import { createSingleCard } from "/js/app/routes/feed/cards/createSingleCard.js";
 import { posts } from "/js/utils/source/posts/posts.js";
-import { userLookup } from "/js/utils/source/posts/posts.js";
+import { userLookup } from "/js/utils/source/users/users.js";
 
 export function submitPost() {
   const submitBtn = document.getElementById("submit-btn");

@@ -1,8 +1,8 @@
-export const users = [
+const users = [
   {
     id: 1,
     username: "JimmyCraig",
-    name: "Jimmy Craig",
+    name: "Jimmy John Craig",
     email: "j.craig@email.com",
     password: "",
     description: "Born in Rome, travelling for food.",
@@ -93,3 +93,7 @@ export const users = [
     },
   },
 ];
+
+export const userLookup = Object.fromEntries(
+  users.map((user) => [user.id, user])
+);

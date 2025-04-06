@@ -1630,19 +1630,11 @@ video {
 }
 
 .font-brand{
-  font-family: Quicksand, Poppins;
+  font-family: Quicksand, Poppins, sans-serif;
 }
 
 .font-typewriter{
   font-family: Geist Mono, sans-serif;
-}
-
-.text-\[1rem\]{
-  font-size: 1rem;
-}
-
-.text-\[2rem\]{
-  font-size: 2rem;
 }
 
 .text-\[38px\]{
@@ -2069,6 +2061,11 @@ video {
 .hover\:dark\:text-gray-200:is(.dark *):hover{
   --tw-text-opacity: 1;
   color: rgb(229 231 235 / var(--tw-text-opacity, 1));
+}
+
+.hover\:dark\:text-accent-dark:is(.dark *):hover{
+  --tw-text-opacity: 1;
+  color: rgb(51 233 78 / var(--tw-text-opacity, 1));
 }
 
 .dark\:hover\:brightness-110:hover:is(.dark *){

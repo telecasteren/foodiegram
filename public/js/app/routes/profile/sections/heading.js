@@ -1,10 +1,11 @@
 import { createTitle } from "/js/app/components/titles/title.js";
-import { users } from "/js/utils/source/users/users.js";
+import { userLookup } from "/js/utils/source/users/users.js";
+import { userMessage } from "/js/utils/messages/userMessage.js";
 
 export default function Heading() {
   const urlParams = new URLSearchParams(window.location.search);
-  const userIndex = parseInt(urlParams.get("user")) || 0;
-  const user = users[userIndex];
+  const userId = parseInt(urlParams.get("id"));
+  const user = userLookup[userId];
 
   const userHeading = document.createElement("div");
   userHeading.classList.add(

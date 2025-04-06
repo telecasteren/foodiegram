@@ -11,7 +11,7 @@ module.exports = {
     },
     fontFamily: {
       body: ["Poppins", "sans-serif"],
-      brand: ["Quicksand", "Poppins"],
+      brand: ["Quicksand", "Poppins", "sans-serif"],
       typewriter: ["Geist Mono", "sans-serif"],
     },
     extend: {

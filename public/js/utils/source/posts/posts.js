@@ -1,8 +1,4 @@
-import { users } from "/js/utils/source/users/users.js";
-
-export const userLookup = Object.fromEntries(
-  users.map((user) => [user.id, user])
-);
+import { userLookup } from "/js/utils/source/users/users.js";
 
 export let posts = JSON.parse(localStorage.getItem("posts")) || [
   {

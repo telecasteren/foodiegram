@@ -1,9 +1,5 @@
 ## TO DO
 
-**Dashboard**
-
-- Add pizza logo and animate
-
 **Feed**
 
 - Sort logic for sorting by parameters

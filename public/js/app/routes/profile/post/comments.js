@@ -3,7 +3,8 @@ export default function Comments() {
   container.className = "flex items-start gap-2.5";
 
   const img = document.createElement("img");
-  img.className = "w-8 h-8 rounded-full";
+  img.className =
+    "w-8 h-8 rounded-full border border-accent-light dark:border-accent-dark";
   img.src = "/resources/images/avatars/jeremy-bishop-_CFv3bntQlQ-unsplash.jpg";
   img.alt = "A man surfing in large wave";
 
@@ -27,7 +28,7 @@ export default function Comments() {
   const message = document.createElement("p");
   message.className = "text-sm font-normal py-2 text-gray-900 dark:text-white";
   message.textContent =
-    "That's awesome. I think our users will really appreciate the improvements.";
+    "That's awesome. It looks really good, and I'm gonna try that recipe.";
 
   const statusSpan = document.createElement("span");
   statusSpan.className = "text-sm font-normal text-gray-500 dark:text-gray-400";

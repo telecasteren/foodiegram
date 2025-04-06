@@ -1,6 +1,6 @@
 export function createTitle(text) {
   const title = document.createElement("h1");
-  title.className = "text-center dark:text-darkText";
+  title.className = "text-center";
   title.textContent = text;
 
   const dot = document.createElement("span");
