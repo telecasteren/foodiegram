@@ -30,7 +30,7 @@ export default function SinglePost() {
   const authorIMG = document.createElement("img");
   authorIMG.setAttribute("data-userId", postAuthor.id);
   authorIMG.className =
-    "w-8 h-8 rounded-full border border-accent-light dark:border-accent-dark";
+    "w-8 h-8 object-cover rounded-full border border-accent-light dark:border-accent-dark";
   authorIMG.src = postAuthor.avatarSrc;
   authorIMG.alt = postAuthor.avatarAlt;
 

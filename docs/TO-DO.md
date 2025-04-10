@@ -2,7 +2,7 @@
 
 **Feed**
 
-- Sort logic for sorting by parameters
+- Sort logic for sorting by parameters on feed and profile
 
 **Profile**
 

@@ -1,6 +1,5 @@
 import { createTitle } from "/js/app/components/titles/title.js";
 import { userLookup } from "/js/utils/source/users/users.js";
-import { userMessage } from "/js/utils/messages/userMessage.js";
 
 export default function Heading() {
   const urlParams = new URLSearchParams(window.location.search);
@@ -30,6 +29,7 @@ export default function Heading() {
   avatarPlaceholder.textContent = "JL";
 
   const avatar = document.createElement("img");
+  avatar.className = "w-32 h-32 object-cover";
   avatar.src = user.avatarSrc;
   avatar.alt = user.avatarAlt;
 

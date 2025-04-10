@@ -11,7 +11,7 @@ const postsLookup = posts.reduce((acc, post) => {
 export default function Posts() {
   const postsList = document.createElement("div");
   postsList.className =
-    "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-10";
+    "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-5";
 
   Object.values(postsLookup).forEach((userPosts) => {
     userPosts.forEach((post) => {

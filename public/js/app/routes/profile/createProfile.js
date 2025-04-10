@@ -1,6 +1,7 @@
 import Heading from "/js/app/routes/profile/sections/heading.js";
 import Details from "/js/app/routes/profile/sections/details.js";
 import Description from "/js/app/routes/profile/sections/description.js";
+import { sortProfilePosts } from "/js/app/components/search/sortProfilePosts.js";
 import Posts from "/js/app/routes/profile/sections/posts.js";
 import { userLookup } from "/js/utils/source/users/users.js";
 import { userMessage } from "/js/utils/messages/userMessage.js";
@@ -24,11 +25,13 @@ export default function Profile() {
   const userHeading = Heading();
   const userDetails = Details();
   const userDescription = Description();
+  const sortOptions = sortProfilePosts();
   const postsList = Posts();
 
   profileContainer.appendChild(userHeading);
   profileContainer.appendChild(userDetails);
   profileContainer.appendChild(userDescription);
+  profileContainer.appendChild(sortOptions);
   profileContainer.appendChild(postsList);
 
   return profileContainer;

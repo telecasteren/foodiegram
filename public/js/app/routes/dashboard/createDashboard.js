@@ -21,6 +21,14 @@ export default function Dashboard() {
 
   setTimeout(() => {
     const caption = typeText();
+    caption.classList.add(
+      "flex",
+      "flex-wrap",
+      "break-words",
+      "whitespace-normal",
+      "max-w-full",
+      "text-center"
+    );
     contentContainer.appendChild(caption);
   }, 2000);
 
