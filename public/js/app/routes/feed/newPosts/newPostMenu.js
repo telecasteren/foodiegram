@@ -4,7 +4,8 @@ export default function newPostMenu() {
 
   const menu = document.createElement("div");
   menu.id = "speed-dial-menu-dropdown";
-  menu.className = `flex flex-col justify-end hidden mb-4 bg-white border border-gray-100 rounded-lg shadow-xs dark:bg-gray-700 dark:border-gray-600`;
+  menu.className = `flex flex-col justify-end hidden mb-4 bg-white
+  rounded-lg shadow-xs dark:bg-gray-700 dark:border-gray-600`;
 
   const ul = document.createElement("ul");
   ul.className = "text-sm text-gray-500 dark:text-gray-300";
@@ -12,9 +13,8 @@ export default function newPostMenu() {
   const li = document.createElement("li");
   const a = document.createElement("a");
   a.href = "#";
-  a.className = `flex items-center px-8 py-4 bg-white border border-accent-light
-  rounded-md shadow-sm text-lg hover:text-gray-900 hover:bg-gray-100 dark:bg-[#0f0c29]
-  dark:border-accent-dark dark:hover:bg-gray-600 dark:hover:text-white`;
+  a.className = `flex items-center px-4 py-2 bg-white
+  rounded-md shadow-sm text-sm dark:bg-[#0f0c29]`;
 
   a.appendChild(document.createTextNode("Create new post."));
   li.appendChild(a);
@@ -27,7 +27,8 @@ export default function newPostMenu() {
   button.id = "create-post";
   button.setAttribute("aria-controls", "speed-dial-menu-dropdown");
   button.className = `flex items-center justify-center text-center ml-auto
-  text-white bg-accent-light rounded-full w-16 h-16 hover:brightness-110 dark:bg-accent-dark`;
+  text-white bg-accent-light rounded-full w-16 h-16 hover:brightness-110 dark:bg-accent-dark
+  hover:scale-105 transition-transform duration-300`;
 
   const buttonIcon = document.createElement("p");
   buttonIcon.className = "font-medium text-bigger dark:text-bg-dark1";
