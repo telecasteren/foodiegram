@@ -10,6 +10,7 @@ import { openPost } from "/js/app/events/profile/goToPost.js";
 import { submitPost } from "/js/app/events/feed/createPost/submitPostEvents.js";
 import { createSkeletonCard } from "/js/app/components/loader/skeletonCard.js";
 import { createSkeletonProfile } from "/js/app/components/loader/skeletonProfile.js";
+import { spinner } from "/js/app/components/loader/spinner.js";
 
 export default function renderContent() {
   function renderPage() {
@@ -58,8 +59,12 @@ export default function renderContent() {
         break;
       case "/user/post/":
         if (postContent) {
-          postContent.innerHTML = "";
-          postContent.appendChild(SinglePost());
+          postContent.appendChild(spinner());
+
+          setTimeout(() => {
+            postContent.innerHTML = "";
+            postContent.appendChild(SinglePost());
+          }, 1000);
         }
         break;
       default:

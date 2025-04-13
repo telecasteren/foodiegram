@@ -128,3 +128,4 @@ Under no licence p.t.
 
 [Typewriter effect](https://css-tricks.com/snippets/css/typewriter-effect/)</br>
 [Typewriter library](https://www.typeitjs.com/)
+[isoDateString to human readable](https://www.geeksforgeeks.org/how-to-format-javascript-date-as-yyyy-mm-dd/)

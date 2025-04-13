@@ -1,45 +1,72 @@
+import { posts } from "/js/utils/source/posts/posts.js";
+import { userLookup } from "/js/utils/source/users/users.js";
+import { formatDate } from "/js/utils/general/formatDate.js";
+
 export default function Comments() {
-  const container = document.createElement("div");
-  container.className = "flex items-start gap-2.5";
+  const urlParams = new URLSearchParams(window.location.search);
+  const postId = parseInt(urlParams.get("id"));
+  const post = posts.find((p) => p.id === postId);
 
-  const img = document.createElement("img");
-  img.className =
-    "w-8 h-8 rounded-full border border-accent-light dark:border-accent-dark";
-  img.src = "/resources/images/avatars/jeremy-bishop-_CFv3bntQlQ-unsplash.jpg";
-  img.alt = "A man surfing in large wave";
+  const commentsContainer = document.createElement("div");
 
-  const textContainer = document.createElement("div");
-  textContainer.className = "flex flex-col w-full max-w-[320px] leading-1.5";
+  if (
+    !post ||
+    !post.comments ||
+    !post.comments.length ||
+    !Array.isArray(post.comments)
+  ) {
+    const info = document.createElement("div");
+    info.textContent = "Be the first to comment on this post!";
+    info.className =
+      "p-2 text-center text-[12px] rounded-sm shadow-xl border border-accent-light dark:border-accent-dark";
 
-  const header = document.createElement("div");
-  header.className = "flex items-center space-x-2 rtl:space-x-reverse";
+    commentsContainer.appendChild(info);
 
-  const nameSpan = document.createElement("span");
-  nameSpan.className = "text-sm font-semibold text-gray-900 dark:text-white";
-  nameSpan.textContent = "Donnie Green";
+    return commentsContainer;
+  }
 
-  const timeSpan = document.createElement("span");
-  timeSpan.className = "text-sm font-normal text-gray-500 dark:text-gray-400";
-  timeSpan.textContent = "11:46";
+  post.comments.forEach((comment) => {
+    const commentAuthor = userLookup[comment.userId];
 
-  header.appendChild(nameSpan);
-  header.appendChild(timeSpan);
+    const container = document.createElement("div");
+    container.className = "flex items-start gap-2.5";
 
-  const message = document.createElement("p");
-  message.className = "text-sm font-normal py-2 text-gray-900 dark:text-white";
-  message.textContent =
-    "That's awesome. It looks really good, and I'm gonna try that recipe.";
+    const img = document.createElement("img");
+    img.className =
+      "w-8 h-8 rounded-full object-cover border border-accent-light dark:border-accent-dark";
+    img.src = commentAuthor.avatarSrc || "No image found.";
+    img.alt = commentAuthor.avatarAlt || "";
 
-  const statusSpan = document.createElement("span");
-  statusSpan.className = "text-sm font-normal text-gray-500 dark:text-gray-400";
-  statusSpan.textContent = "Delivered";
+    const textContainer = document.createElement("div");
+    textContainer.className = "flex flex-col w-full max-w-[320px] leading-1.5";
 
-  textContainer.appendChild(header);
-  textContainer.appendChild(message);
-  textContainer.appendChild(statusSpan);
+    const header = document.createElement("div");
+    header.className = "flex items-center space-x-2 rtl:space-x-reverse";
 
-  container.appendChild(img);
-  container.appendChild(textContainer);
+    const nameSpan = document.createElement("span");
+    nameSpan.className = "text-sm font-semibold text-gray-900 dark:text-white";
+    nameSpan.textContent = comment.username;
+    header.appendChild(nameSpan);
 
-  return container;
+    const timeSpan = document.createElement("span");
+    timeSpan.className =
+      "text-tiny font-normal text-gray-500 dark:text-gray-400";
+    timeSpan.textContent = `Delivered ${formatDate(comment.createdAt)}`;
+
+    const message = document.createElement("p");
+    message.className =
+      "text-sm font-normal py-2 text-gray-900 dark:text-white";
+    message.textContent = comment.text;
+
+    textContainer.appendChild(header);
+    textContainer.appendChild(message);
+    textContainer.appendChild(timeSpan);
+
+    container.appendChild(img);
+    container.appendChild(textContainer);
+
+    commentsContainer.appendChild(container);
+  });
+
+  return commentsContainer;
 }
