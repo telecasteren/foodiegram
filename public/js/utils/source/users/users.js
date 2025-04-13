@@ -22,7 +22,7 @@ const users = [
     password: "",
     description: "Fruitarian conquering the world!",
     avatarSrc:
-      "/resources/images/avatars/ayo-ogunseinde-6W4F62sN_yI-unsplash.jpg",
+      "/resources/images/avatars/ayo-ogunseinde-6W4F62sN_yI-unsplash.webp",
     avatarAlt: "ayo-ogunseinde-6W4F62sN_yI-unsplash",
     followers: "44",
     following: "213K",
@@ -37,7 +37,7 @@ const users = [
     email: "nilsen.tele@gmail.com",
     password: "foodie",
     description: "x-rated food enthusiast.",
-    avatarSrc: "/resources/images/avatars/ian-dooley-d1UPkiFd04A-unsplash.jpg",
+    avatarSrc: "/resources/images/avatars/ian-dooley-d1UPkiFd04A-unsplash.webp",
     avatarAlt: "ian-dooley-d1UPkiFd04A-unsplash",
     followers: "80",
     following: "78",
@@ -52,7 +52,8 @@ const users = [
     email: "suar@ez.com",
     password: "",
     description: "A sweet treats girl from all over the world!",
-    avatarSrc: "/resources/images/avatars/toa-heftiba-O3ymvT7Wf9U-unsplash.jpg",
+    avatarSrc:
+      "/resources/images/avatars/toa-heftiba-O3ymvT7Wf9U-unsplash.webp",
     avatarAlt: "toa-heftiba-O3ymvT7Wf9U-unsplash",
     followers: "340K",
     following: "1439",
@@ -68,7 +69,7 @@ const users = [
     password: "",
     description: "Colorful boy from South of the Equator.",
     avatarSrc:
-      "/resources/images/avatars/ivana-cajina-_7LbC5J-jw4-unsplash.jpg",
+      "/resources/images/avatars/ivana-cajina-_7LbC5J-jw4-unsplash.webp",
     avatarAlt: "ivana-cajina-_7LbC5J-jw4-unsplash",
     followers: "1.2M",
     following: "22",
@@ -84,7 +85,7 @@ const users = [
     password: "",
     description: "Just ease into it and keep eating!",
     avatarSrc:
-      "/resources/images/avatars/rafaella-mendes-diniz-et_78QkMMQs-unsplash.jpg",
+      "/resources/images/avatars/rafaella-mendes-diniz-et_78QkMMQs-unsplash.webp",
     avatarAlt: "rafaella-mendes-diniz-et_78QkMMQs-unsplash",
     followers: "24",
     following: "51",

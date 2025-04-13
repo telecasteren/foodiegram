@@ -102,20 +102,27 @@ Under no licence p.t.
 
 - ChatGPT for text content in some of the titles and post captions.
 
-#### Under a free licence on Unsplash for images by:
+### Under a free licence on Unsplash, images by the creators:
 
-- rayul-\_M6gy9oHgII-unsplash.webp</br>
-- chad-montano--GFCYhoRe48-unsplash.jpg</br>
-- casey-lee-awj7sRviVXo-unsplash.jpg</br>
-- brooke-lark-1Rm9GLHV0UA-unsplash.jpg</br>
-- anh-nguyen-kcA-c3f_3FE-unsplash.jpg</br>
-- adam-jaime-dmkmrNptMpw-unsplash.jpg</br>
-- toa-heftiba-O3ymvT7Wf9U-unsplash.jpg</br>
-- rafaella-mendes-diniz-et_78QkMMQs-unsplash.jpg</br>
-- jeremy-bishop-\_CFv3bntQlQ-unsplash.jpg</br>
-- ivana-cajina-\_7LbC5J-jw4-unsplash.jpg</br>
-- ian-dooley-d1UPkiFd04A-unsplash.jpg</br>
-- ayo-ogunseinde-6W4F62sN_yI-unsplash.jpg
+#### **AVATAR IMAGES**
+
+- [rayul @ Unsplash](https://unsplash.com/@rayul)
+- [ayo-ogunseinde @ Unsplash](https://unsplash.com/@armedshutter)
+- [ian-dooley @ Unsplash](https://unsplash.com/@iandooley)
+- [toa-heftiba @ Unsplash](https://unsplash.com/@heftiba)
+- [ivana-cajina @ Unsplash](https://unsplash.com/@von_co)
+- [rafaella-mendes-diniz @ Unsplash](https://unsplash.com/@rafaellamendesdiniz)
+
+#### **POST IMAGES**
+
+- [rayul @ Unsplash](https://unsplash.com/@rayul)
+- [chad-montano @ Unsplash](https://unsplash.com/@briewilly)
+- [casey-lee @ Unsplash](https://unsplash.com/@caseylee)
+- [brooke-lark @ Unsplash](https://unsplash.com/@brookelark)
+- [anh-nguyen @ Unsplash](https://unsplash.com/@nguyentuananh)
+- [adam-jaime @ Unsplash](https://unsplash.com/@adamjaime)
+- [joseph-gonzalez @ Unsplash](https://unsplash.com/@gonzalez)
+- [victoria-shes @ Unsplash](https://unsplash.com/@sheshoots)
 
 ### ℹ️ Resources
 

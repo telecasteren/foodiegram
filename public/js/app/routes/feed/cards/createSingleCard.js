@@ -14,13 +14,13 @@ export function createSingleCard(post) {
 
   const linkTitle = document.createElement("a");
   linkTitle.href = "/user/profile/";
-  const authorName = document.createElement("h5");
+  const authorName = document.createElement("h2");
   authorName.className =
     "mb-2 text-2xl font-bold tracking-tight text-accent-light dark:text-accent-dark hover:text-gray-900 hover:dark:text-gray-200";
   authorName.textContent = post.username;
   linkTitle.appendChild(authorName);
 
-  const title = document.createElement("h5");
+  const title = document.createElement("h3");
   title.className =
     "mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white";
   title.textContent = post.title;
