@@ -1,20 +1,35 @@
-export function sortOptions() {
+export function createSortOptions({
+  triggerType = "button",
+  triggerText = "Sort options",
+  triggerClasses = "",
+  containerClasses = "sortOptions relative",
+}) {
   const container = document.createElement("div");
-  container.className = "sortOptions relative";
+  container.className = containerClasses;
 
-  const button = document.createElement("button");
-  button.id = "dropdownInformationButton";
-  button.setAttribute("data-dropdown-toggle", "dropdownInformation");
-  button.className = `font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center
-  text-gray-800 bg-gray-50 hover:bg-gray-100 border border-gray-300 focus:ring-1 focus:outline-none focus:ring-blue-300
-   dark:bg-[#0f0c29] dark:hover:brightness-110 dark:border-none dark:text-gray-400`;
-  button.type = "button";
-  button.innerHTML = `Sort options <svg class="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/></svg>`;
+  const trigger = document.createElement(triggerType);
+  trigger.textContent = triggerText;
+  trigger.id = "dropdownInformationButton";
+  trigger.setAttribute("data-dropdown-toggle", "dropdownInformation");
+
+  if (triggerType === "button") {
+    // FEED
+    trigger.className =
+      triggerClasses ||
+      `font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center text-gray-800
+      bg-gray-50 hover:bg-gray-100 border border-gray-300 focus:ring-1 focus:outline-none focus:ring-blue-300
+      dark:bg-[#0f0c29] dark:hover:brightness-110 dark:border-none dark:text-gray-400`;
+    trigger.type = "button";
+    trigger.innerHTML = `Sort options <svg class="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/></svg>`;
+  } else {
+    // PROFILE
+    trigger.className = triggerClasses || "cursor-pointer hover:underline";
+  }
 
   const dropdown = document.createElement("div");
   dropdown.id = "dropdownInformation";
-  dropdown.className =
-    "z-10 absolute hidden bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-44 dark:bg-[#0f0c29] dark:divide-gray-600";
+  dropdown.className = `z-10 absolute hidden bg-white divide-y divide-gray-100 rounded-lg
+  shadow-sm w-44 dark:bg-[#0f0c29] dark:divide-gray-600`;
 
   const userInfo = document.createElement("div");
   userInfo.className = "px-4 py-3 text-sm text-gray-900 dark:text-white";
@@ -40,10 +55,10 @@ export function sortOptions() {
   dropdown.appendChild(userInfo);
   dropdown.appendChild(menuList);
 
-  container.appendChild(button);
+  container.appendChild(trigger);
   container.appendChild(dropdown);
 
-  button.addEventListener("click", () => {
+  trigger.addEventListener("click", () => {
     dropdown.classList.toggle("hidden");
   });
 

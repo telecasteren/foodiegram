@@ -1,7 +1,7 @@
 import Dashboard from "/js/app/routes/dashboard/createDashboard.js";
 import Feed from "/js/app/routes/feed/createFeed.js";
 import Profile from "/js/app/routes/profile/createProfile.js";
-import SinglePost from "/js/app/routes/profile/post/singlePost.js";
+import SinglePost from "/js/app/routes/profile/singlePost/singlePost.js";
 import { updateUnderline } from "/js/app/components/navbar/updateUnderline.js";
 import { displayAuthForms } from "/js/app/events/authForm/displayAuthForms.js";
 import { createCards } from "/js/app/routes/feed/createCards.js";

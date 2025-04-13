@@ -1,7 +1,7 @@
 import { posts } from "/js/utils/source/posts/posts.js";
 import { userLookup } from "/js/utils/source/users/users.js";
-import { dateBadge } from "/js/app/routes/profile/post/createBadge.js";
-import Comments from "/js/app/routes/profile/post/comments.js";
+import { dateBadge } from "/js/app/routes/profile/singlePost/createBadge.js";
+import Comments from "/js/app/routes/profile/singlePost/comments.js";
 
 export default function SinglePost() {
   const urlParams = new URLSearchParams(window.location.search);

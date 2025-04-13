@@ -3,8 +3,12 @@ import Navbar from "/js/app/components/navbar/navbar.js";
 import Footer from "/js/app/components/footer/footer.js";
 import renderContent from "/js/app/ui/renderContent.js";
 import { createSingleCard } from "/js/app/routes/feed/cards/createSingleCard.js";
+import { setMetaDescriptions } from "/js/utils/general/setMetaDesc.js";
+import { setPageTitles } from "/js/utils/general/setPageTitles.js";
 
 document.addEventListener("DOMContentLoaded", () => {
+  setMetaDescriptions();
+  setPageTitles();
   // RENDER TOP CONTENT:
   setTheme();
   Navbar();

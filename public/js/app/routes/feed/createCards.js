@@ -1,5 +1,5 @@
 import { posts } from "/js/utils/source/posts/posts.js";
-import { sortOptions } from "/js/app/components/search/sortOptions.js";
+import { createSortOptions } from "/js/app/components/search/sortOptions.js";
 
 export function createCards() {
   const cardContainer = document.createElement("div");
@@ -10,7 +10,10 @@ export function createCards() {
   const sortWrapper = document.createElement("div");
   sortWrapper.className = "w-full flex flex-wrap justify-center";
 
-  const sortingMenu = sortOptions();
+  const sortingMenu = createSortOptions({
+    triggerType: "button",
+    triggerText: "Sort options",
+  });
   sortWrapper.appendChild(sortingMenu);
 
   cardContainer.appendChild(sortWrapper);
