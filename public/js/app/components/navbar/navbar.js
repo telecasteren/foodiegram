@@ -40,6 +40,8 @@ export default function Navbar() {
   // MOBILE MENU
   const mobileNav = document.createElement("nav");
   mobileNav.id = "mobile-nav";
+  mobileNav.className = `fixed top-0 left-0 right-0 z-40
+   bg-transparent transition-background-color duration-300`;
 
   const container = document.createElement("div");
   container.className =
@@ -77,7 +79,7 @@ export default function Navbar() {
   srText.textContent = "Open main menu";
 
   const menuIcon = document.createElement("img");
-  menuIcon.className = "";
+  menuIcon.className = "dark:invert dark:hover:invert-0";
   menuIcon.setAttribute("aria-hidden", "true");
   menuIcon.src = "/resources/icons/hamburger-icon-f.png";
   menuIcon.alt = "Navigation menu";
@@ -86,7 +88,7 @@ export default function Navbar() {
   menuButton.appendChild(menuIcon);
 
   const menuContainer = document.createElement("div");
-  menuContainer.className = "hidden w-full";
+  menuContainer.className = "hidden w-full bg-white dark:bg-bg-dark3";
   menuContainer.id = "navbar-hamburger";
 
   const menuList = document.createElement("ul");
@@ -138,6 +140,12 @@ export default function Navbar() {
     menuContainer.classList.toggle("hidden");
   });
 
+  document.addEventListener("click", (e) => {
+    if (!menuButton.contains(e.target) && !mobileNav.contains(e.target)) {
+      menuContainer.classList.add("hidden");
+    }
+  });
+
   initialUnderline(links);
   window.addEventListener("resize", () => initialUnderline(links));
 
@@ -153,4 +161,29 @@ export default function Navbar() {
 
   window.addEventListener("resize", handleScreenChange);
   handleScreenChange();
+
+  let scrollStarted = false;
+  let scrollTimeout;
+
+  window.addEventListener("scroll", () => {
+    const scrollPosition = window.scrollY || window.pageYOffset;
+
+    if (!scrollStarted) {
+      scrollStarted = true;
+
+      mobileNav.classList.remove("bg-transparent");
+      mobileNav.classList.add("bg-white", "dark:bg-bg-dark3");
+    }
+
+    clearTimeout(scrollTimeout);
+
+    scrollTimeout = setTimeout(() => {
+      scrollStarted = false;
+
+      if (scrollPosition === 0) {
+        mobileNav.classList.remove("bg-white", "dark:bg-bg-dark3");
+        mobileNav.classList.add("bg-transparent");
+      }
+    }, 100);
+  });
 }

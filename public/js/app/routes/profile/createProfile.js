@@ -20,7 +20,8 @@ export default function Profile() {
   }
 
   const profileContainer = document.createElement("div");
-  profileContainer.className = "profile-container min-h-screen p-8 gap-16";
+  profileContainer.className =
+    "profile-container w-[100vw] min-h-screen p-8 gap-16";
 
   const userHeading = Heading();
   const userDetails = Details();
@@ -31,11 +32,15 @@ export default function Profile() {
   });
   const postsList = Posts();
 
+  const postsContainer = document.createElement("div");
+  postsContainer.className = "w-[90%] mx-auto";
+  postsContainer.appendChild(sortOptions);
+  postsContainer.appendChild(postsList);
+
   profileContainer.appendChild(userHeading);
   profileContainer.appendChild(userDetails);
   profileContainer.appendChild(userDescription);
-  profileContainer.appendChild(sortOptions);
-  profileContainer.appendChild(postsList);
+  profileContainer.appendChild(postsContainer);
 
   return profileContainer;
 }

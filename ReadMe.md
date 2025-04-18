@@ -127,5 +127,6 @@ Under no licence p.t.
 ### ℹ️ Resources
 
 [Typewriter effect](https://css-tricks.com/snippets/css/typewriter-effect/)</br>
-[Typewriter library](https://www.typeitjs.com/)
-[isoDateString to human readable](https://www.geeksforgeeks.org/how-to-format-javascript-date-as-yyyy-mm-dd/)
+[Typewriter library](https://www.typeitjs.com/)</br>
+[IsoDateString to human readable](https://www.geeksforgeeks.org/how-to-format-javascript-date-as-yyyy-mm-dd/)</br>
+[Truncate long strings](https://stackoverflow.com/questions/1199352/smart-way-to-truncate-long-strings)

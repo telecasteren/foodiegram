@@ -12,11 +12,18 @@ export default function Heading() {
     "flex-wrap",
     "justify-center",
     "items-center",
-    "gap-2"
+    "gap-2",
+    "relative"
   );
 
-  const username = createTitle(user.username);
-  username.className = "text-bigger m-4";
+  let visibleUsername = user.username;
+  let maxLength = 20;
+  if (visibleUsername.length > maxLength) {
+    visibleUsername = visibleUsername.substring(0, maxLength) + "..";
+  }
+
+  const username = createTitle(visibleUsername);
+  username.className = "text-[1.8rem] sm:text-bigger m-4";
 
   const avatarWrapper = document.createElement("div");
   avatarWrapper.className = `relative inline-flex items-center justify-center
@@ -41,6 +48,21 @@ export default function Heading() {
 
   userHeading.appendChild(avatarWrapper);
   userHeading.appendChild(username);
+
+  const fullUsername = document.createElement("div");
+  fullUsername.className = `absolute top-[90%] sm:top-[65%] left-1/2 -translate-x-1/2 sm:translate-x-0
+  bg-gray-100 text-gray-800 p-2 rounded-md shadow-md text-sm
+  opacity-0 transition-opacity duration-200 z-10 pointer-events-none`;
+  fullUsername.textContent = user.username;
+  userHeading.appendChild(fullUsername);
+
+  username.addEventListener("mouseover", () => {
+    fullUsername.classList.remove("opacity-0");
+  });
+
+  username.addEventListener("mouseout", () => {
+    fullUsername.classList.add("opacity-0");
+  });
 
   return userHeading;
 }

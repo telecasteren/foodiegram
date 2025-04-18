@@ -8,6 +8,7 @@ export default function Comments() {
   const post = posts.find((p) => p.id === postId);
 
   const commentsContainer = document.createElement("div");
+  commentsContainer.className = "flex flex-col gap-4";
 
   if (
     !post ||

@@ -10,6 +10,9 @@
     "@tailwindcss/typography": "^0.5.16"
   },
   "devDependencies": {
-    "concurrently": "^9.1.2"
+    "autoprefixer": "^10.4.21",
+    "concurrently": "^9.1.2",
+    "postcss": "^8.5.3",
+    "tailwindcss": "^4.1.4"
   }
 }

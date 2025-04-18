@@ -14,12 +14,3 @@ function createButton({ text, href, newTab = false }) {
   return button;
 }
 export default createButton;
-
-// Use like this:
-
-//   const button = createButton({
-//     text: "Login",
-//     href: "/path/to/login/",
-//     newTab: true,
-//   });
-//   element.appendChild(button);
