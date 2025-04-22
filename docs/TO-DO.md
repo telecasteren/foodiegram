@@ -1,15 +1,11 @@
 ## TO DO
 
-**Feed**
-
-- Sort logic for sorting by parameters on feed and profile
-
 **Posts**
 
-- Ability to like posts
 - Ability to comment on posts
 
-**General**
+**For the future**
 
+- Sort logic for sorting by parameters on feed and profile
 - Saving users and posts to some backend. Firebase?
 - Ability to log in as specific users

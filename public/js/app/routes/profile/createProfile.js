@@ -5,6 +5,7 @@ import { createSortOptions } from "/js/app/components/search/sortOptions.js";
 import Posts from "/js/app/routes/profile/sections/posts.js";
 import { userLookup } from "/js/utils/source/users/users.js";
 import { userMessage } from "/js/utils/messages/userMessage.js";
+import createButton from "/js/app/components/buttons/primaryBtn.js";
 
 export default function Profile() {
   const urlParams = new URLSearchParams(window.location.search);
@@ -12,6 +13,19 @@ export default function Profile() {
   const user = userLookup[userId];
 
   if (!user) {
+    const footer = document.querySelector(".footer");
+    const exampleProfileBtn = createButton({
+      text: "Click to see example profile",
+      href: "/user/profile/?id=1",
+      newTab: false,
+    });
+    exampleProfileBtn.classList.add(
+      "btn-primary",
+      "w-64",
+      "justify-self-center"
+    );
+    document.body.insertBefore(exampleProfileBtn, footer);
+
     userMessage(
       "error",
       "Woops! Couldn't find this user. Should they have been here? Try again later."

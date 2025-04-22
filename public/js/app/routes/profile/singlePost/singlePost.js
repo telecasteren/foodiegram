@@ -43,6 +43,19 @@ export default function SinglePost() {
   authorName.textContent = post.username;
   linkTitle.appendChild(authorName);
 
+  const actionContainer = document.createElement("div");
+  actionContainer.className =
+    "flex flex-wrap w-1/2 gap-2 items-center justify-end";
+
+  const likes = document.createElement("div");
+  likes.className = "cursor-pointer";
+  likes.innerHTML = `<i class="fa-regular fa-heart" style="color: var(--accent)"></i>`;
+  actionContainer.appendChild(likes);
+
+  const numbOfLikes = document.createElement("div");
+  numbOfLikes.textContent = post.likes;
+  actionContainer.appendChild(numbOfLikes);
+
   const title = document.createElement("h5");
   title.className =
     "mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white";
@@ -54,6 +67,8 @@ export default function SinglePost() {
 
   userContainer.appendChild(authorIMG);
   userContainer.appendChild(linkTitle);
+  userContainer.appendChild(actionContainer);
+
   contentDiv.appendChild(userContainer);
   contentDiv.appendChild(title);
   contentDiv.appendChild(paragraph);
@@ -79,6 +94,18 @@ export default function SinglePost() {
   card.appendChild(contentDiv);
   cardContainer.appendChild(card);
   cardContainer.appendChild(commentSection);
+
+  const icon = likes.querySelector("i");
+  likes.addEventListener("click", () => {
+    icon.classList.toggle("fa-regular");
+    icon.classList.toggle("fa-solid");
+
+    if (icon.classList.contains("fa-solid")) {
+      numbOfLikes.textContent = post.likes + 1;
+    } else {
+      numbOfLikes.textContent = post.likes;
+    }
+  });
 
   return cardContainer;
 }

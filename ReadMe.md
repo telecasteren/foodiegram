@@ -123,6 +123,15 @@ Under no licence p.t.
 - [adam-jaime @ Unsplash](https://unsplash.com/@adamjaime)
 - [joseph-gonzalez @ Unsplash](https://unsplash.com/@gonzalez)
 - [victoria-shes @ Unsplash](https://unsplash.com/@sheshoots)
+- [adam-jaime @ Unsplash](https://unsplash.com/@adamjaime)
+- [shenggeng-lin @ Unsplash](https://unsplash.com/@shenggeng-lin)
+- [alex-munsell @ Unsplash](https://unsplash.com/@alex-munsell)
+- [emy @ Unsplash](https://unsplash.com/@emy)
+- [cody-chan @ Unsplash](https://unsplash.com/@cody-chan)
+- [heather-barnes @ Unsplash](https://unsplash.com/@heather-barnes)
+- [kobby-mendez @ Unsplash](https://unsplash.com/@kobby-mendez)
+- [otto-norin @ Unsplash](https://unsplash.com/@otto-norin)
+- [nguyen-dang-hoang-nhu @ Unsplash](https://unsplash.com/@nguyen-dang-hoang-nhu)
 
 ### ℹ️ Resources
 

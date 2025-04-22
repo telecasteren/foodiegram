@@ -3,7 +3,7 @@ export default function Footer() {
 
   const footer = document.createElement("footer");
   footer.className =
-    "mt-10 mb-10 text-tiny flex gap-6 flex-wrap items-center justify-center dark:text-dark";
+    "footer mt-10 mb-10 text-tiny flex gap-6 flex-wrap items-center justify-center dark:text-dark";
 
   const copyright = document.createElement("p");
   copyright.id = "footer-copyright";
