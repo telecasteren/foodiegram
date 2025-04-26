@@ -107,6 +107,13 @@ npm run tailwind
 If you just want to make styling/design changes without needing backend functionality, this method is faster and simpler.
 However, for the full experience, I recommend running the full app with concurrently.
 
+### All available scripts
+
+- npm run dev – _runs the full project for development (starts Tailwind CSS watcher and server concurrently)_
+- npm run build – _builds (compiles and minifies) the Tailwind CSS for production_
+- npm run frontend – _serves the public/ folder locally with live-server for a static preview_
+- npm run tailwind – _starts Tailwind CSS in watch mode for development (rebuilds on file changes)_
+
 ## ⭐ Contributing
 
 **Right now I'm not looking for contributors, as this is a school project.**</br>

@@ -80,6 +80,7 @@ export default function AuthForm(isSignup = false) {
   passwordInput.setAttribute("name", "password");
   passwordInput.setAttribute("autocomplete", "current-password");
   passwordInput.setAttribute("required", "true");
+  passwordInput.minLength = 8;
 
   passwordInputDiv.appendChild(passwordInput);
   passwordDiv.appendChild(passwordLabelContainer);
@@ -112,6 +113,7 @@ export default function AuthForm(isSignup = false) {
     confirmPasswordInput.setAttribute("id", "confirm-password");
     confirmPasswordInput.setAttribute("name", "confirm-password");
     confirmPasswordInput.setAttribute("required", "true");
+    confirmPasswordInput.minLength = 8;
 
     confirmPasswordInputDiv.appendChild(confirmPasswordInput);
     confirmPasswordDiv.appendChild(confirmPasswordLabel);

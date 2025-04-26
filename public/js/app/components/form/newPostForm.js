@@ -83,7 +83,7 @@ export default function newPost() {
   title.className = `${sharedStyles} p-2`;
   title.id = "title";
   title.setAttribute("Type", "text");
-  title.maxLength = "20";
+  title.maxLength = "30";
 
   const captionWrapper = document.createElement("div");
 

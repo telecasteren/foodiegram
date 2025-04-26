@@ -45,7 +45,7 @@ function submitHandler(event) {
           text: 0,
           likes: 0,
           username: userLookup[3].username || "Unknown user",
-          userId: 5,
+          userId: 3,
           createdAt: new Date(),
           comments: [],
         };
