@@ -35,19 +35,16 @@ cd foodiegram
 
 **Install the dependencies:**
 
-```bash
-npm install
-```
-
 This will install:
 
 - Express.js (backend server)
 - Tailwind CSS (frontend styles)
+- Live Server (static frontend preview)
 - Other required dependencies
 
-If you have'nt installed Node.js, go to:</br>
-[node.js](https://nodejs.org/en)
-and download the latest version
+If you haven’t installed Node.js, go to:<br/>
+[node.js](https://nodejs.org/en)<br/>
+and download the latest version.
 
 To verify installation and version, run:
 
@@ -56,6 +53,22 @@ To verify installation and version, run:
 node -v
 npm -v
 
+```
+
+**Install concurrently**
+
+This will make it possible to run multiple commands _concurrently_<br/>
+[Read about concurrently here](https://www.npmjs.com/package/concurrently)<br/>
+In this project it is being used in this line inside the package.json file:
+
+```bash
+"dev": "concurrently \"npm run tailwind\" \"node server.js\"",
+```
+
+**Install it locally like this:**
+
+```bash
+npm i -D concurrently
 ```
 
 ### 2. Run the app
@@ -71,14 +84,28 @@ _Server is running on http://localhost:5500_
 
 Now, open it in your preferred browser and get to testing!
 
-**Alternatively, run _only_ Tailwind**
+**Alternatively, run only the frontend**
+
+If you only want to work with the design/styling and don’t need backend features like login/signup:
+
+Run this:
+
+```bash
+npm run frontend
+```
+
+This will launch a local development server for the frontend (public/ folder) using Live Server (already installed with the project dependencies).
+
+In another terminal window, start Tailwind:
 
 ```bash
 npm run tailwind
 ```
 
-**Why _only_ Tailwind?**
-If you don't need the functionality like login/signin,</br> and only want to see and do changes to the design and styling, this is the way.
+**Why only Tailwind?**
+
+If you just want to make styling/design changes without needing backend functionality, this method is faster and simpler.
+However, for the full experience, I recommend running the full app with concurrently.
 
 ## ⭐ Contributing
 

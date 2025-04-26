@@ -15,7 +15,7 @@ export default function Dashboard() {
   contentContainer.className = "justify-center items-center m-2 h-[50px]";
 
   const logoIcon = document.createElement("img");
-  logoIcon.className = "w-18 h-18";
+  logoIcon.className = "w-18 h-18 dark:invert";
   logoIcon.src = "/resources/logo/logo-pizza.png";
   logoIcon.alt = "Logo icon of a Pizza character";
 
