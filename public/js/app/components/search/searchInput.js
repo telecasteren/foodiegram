@@ -40,7 +40,7 @@ export default function searchInput() {
   bg-gray-50 focus:ring-blue-500 focus:border-blue-500
   dark:border-none dark:bg-[#0f0c29] dark:placeholder-gray-400 dark:text-white
   dark:focus:ring-blue-500 dark:focus:border-blue-500`;
-  input.placeholder = "Search for posts...";
+  input.placeholder = "Search posts..";
   input.required = true;
 
   const button = document.createElement("button");

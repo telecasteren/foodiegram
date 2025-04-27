@@ -22,7 +22,8 @@ export default function Profile() {
     exampleProfileBtn.classList.add(
       "btn-primary",
       "w-64",
-      "justify-self-center"
+      "justify-self-center",
+      "mt-32"
     );
     document.body.insertBefore(exampleProfileBtn, footer);
 

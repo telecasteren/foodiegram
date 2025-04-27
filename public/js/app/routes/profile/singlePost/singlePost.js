@@ -10,7 +10,8 @@ export default function SinglePost() {
   const postAuthor = userLookup[post.userId];
 
   const cardContainer = document.createElement("div");
-  cardContainer.className = "flex flex-column flex-wrap justify-center mt-5";
+  cardContainer.className =
+    "flex flex-column flex-wrap justify-center mt-5 w-[100vw]";
 
   const card = document.createElement("div");
   card.className = `max-w-sm w-full bg-white border border-gray-200 rounded-l-sm
@@ -25,7 +26,10 @@ export default function SinglePost() {
   contentDiv.className = "p-5";
 
   const userContainer = document.createElement("div");
-  userContainer.className = "flex flex-wrap items-center gap-2 mb-2";
+  userContainer.className = "flex flex-wrap items-center justify-between mb-2";
+
+  const authorContainer = document.createElement("div");
+  authorContainer.className = "flex flex-wrap items-center gap-2";
 
   const authorIMG = document.createElement("img");
   authorIMG.setAttribute("data-userId", postAuthor.id);
@@ -33,19 +37,20 @@ export default function SinglePost() {
     "w-8 h-8 object-cover rounded-full border border-accent-light dark:border-accent-dark";
   authorIMG.src = postAuthor.avatarSrc;
   authorIMG.alt = postAuthor.avatarAlt;
+  authorContainer.appendChild(authorIMG);
 
   const linkTitle = document.createElement("a");
   linkTitle.href = `/user/profile/?id=${post.userId}`;
   const authorName = document.createElement("h5");
   authorName.setAttribute("data-userId", postAuthor.id);
   authorName.className = `text-2xl tracking-tight text-gray-900 dark:text-gray-200
-  hover:text-accent-light hover:dark:text-accent-dark`;
+  hover:text-accent-light hover:dark:text-accent-dark flex-grow`;
   authorName.textContent = post.username;
   linkTitle.appendChild(authorName);
+  authorContainer.appendChild(linkTitle);
 
   const actionContainer = document.createElement("div");
-  actionContainer.className =
-    "flex flex-wrap w-1/2 gap-2 items-center justify-end";
+  actionContainer.className = "flex flex-wrap gap-2 items-center justify-end";
 
   const likes = document.createElement("div");
   likes.className = "cursor-pointer";
@@ -65,8 +70,7 @@ export default function SinglePost() {
   paragraph.className = "mb-3 font-normal text-gray-700 dark:text-gray-400";
   paragraph.textContent = post.caption;
 
-  userContainer.appendChild(authorIMG);
-  userContainer.appendChild(linkTitle);
+  userContainer.appendChild(authorContainer);
   userContainer.appendChild(actionContainer);
 
   contentDiv.appendChild(userContainer);

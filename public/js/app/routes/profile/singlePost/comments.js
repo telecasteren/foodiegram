@@ -30,16 +30,17 @@ export default function Comments() {
     const commentAuthor = userLookup[comment.userId];
 
     const container = document.createElement("div");
-    container.className = "flex items-start gap-2.5";
+    container.className = "flex flex-wrap items-center gap-x-2";
 
     const img = document.createElement("img");
     img.className =
       "w-8 h-8 rounded-full object-cover border border-accent-light dark:border-accent-dark";
-    img.src = commentAuthor.avatarSrc || "No image found.";
-    img.alt = commentAuthor.avatarAlt || "";
+    img.src = commentAuthor.avatarSrc;
+    img.alt = commentAuthor.avatarAlt || "No image found.";
 
     const textContainer = document.createElement("div");
-    textContainer.className = "flex flex-col w-full max-w-[320px] leading-1.5";
+    textContainer.className =
+      "flex flex-col ml-[42px] w-full max-w-[320px] leading-1.5";
 
     const header = document.createElement("div");
     header.className = "flex items-center space-x-2 rtl:space-x-reverse";
@@ -59,11 +60,11 @@ export default function Comments() {
       "text-sm font-normal py-2 text-gray-900 dark:text-white";
     message.textContent = comment.text;
 
-    textContainer.appendChild(header);
     textContainer.appendChild(message);
     textContainer.appendChild(timeSpan);
 
     container.appendChild(img);
+    container.appendChild(header);
     container.appendChild(textContainer);
 
     commentsContainer.appendChild(container);
