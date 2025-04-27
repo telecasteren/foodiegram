@@ -1,0 +1,61 @@
+import { typeTitle, typeText } from "/js/app/components/titles/typewriter.js";
+import createButton from "/js/app/components/buttons/primaryBtn.js";
+
+export default function Dashboard() {
+  const dashboardContainer = document.createElement("div");
+  dashboardContainer.className =
+    "dashboard-container justify-items-center min-h-screen p-8 gap-16";
+
+  const header = document.createElement("header");
+  const title = typeTitle("FOODIEGRAM");
+  title.classList.add("text-bigger", "md:text-[4.5rem]", "typewriter");
+  header.appendChild(title);
+
+  const contentContainer = document.createElement("div");
+  contentContainer.className = "justify-center items-center m-2 h-[50px]";
+
+  const logoIcon = document.createElement("img");
+  logoIcon.className = "w-18 h-18 dark:invert";
+  logoIcon.src = "/resources/logo/logo-pizza.png";
+  logoIcon.alt = "Logo icon of a Pizza character";
+
+  setTimeout(() => {
+    const caption = typeText();
+    caption.classList.add(
+      "flex",
+      "flex-wrap",
+      "break-words",
+      "whitespace-normal",
+      "max-w-full",
+      "text-center"
+    );
+    contentContainer.appendChild(caption);
+  }, 2000);
+
+  const loginBtn = createButton({
+    text: "Log in.",
+    href: "#",
+    newTab: false,
+  });
+  loginBtn.id = "loginBtn";
+  loginBtn.classList.add("btn-primary");
+  loginBtn.addEventListener("click", (e) => e.preventDefault());
+
+  const signupBtn = createButton({
+    text: "Sign up.",
+    href: "#",
+    newTab: false,
+  });
+  signupBtn.id = "signupBtn";
+  signupBtn.classList.add("btn-secondary");
+  signupBtn.addEventListener("click", (e) => e.preventDefault());
+
+  dashboardContainer.appendChild(header);
+  dashboardContainer.appendChild(logoIcon);
+  dashboardContainer.appendChild(contentContainer);
+
+  dashboardContainer.appendChild(loginBtn);
+  dashboardContainer.appendChild(signupBtn);
+
+  return dashboardContainer;
+}
