@@ -23,7 +23,8 @@ export default function Profile() {
       "btn-primary",
       "w-64",
       "justify-self-center",
-      "mt-32"
+      "mt-32",
+      "text-center"
     );
     document.body.insertBefore(exampleProfileBtn, footer);
 

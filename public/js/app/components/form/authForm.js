@@ -119,6 +119,10 @@ export default function AuthForm(isSignup = false) {
     confirmPasswordDiv.appendChild(confirmPasswordLabel);
     confirmPasswordDiv.appendChild(confirmPasswordInputDiv);
     form.insertBefore(confirmPasswordDiv, submitDiv);
+
+    forgotPassword.style.display = "none";
+  } else {
+    forgotPassword.style.display = "block";
   }
 
   formContainer.appendChild(form);

@@ -30,7 +30,7 @@ export default function Details() {
     text.innerText = number;
 
     const labelText = document.createElement("div");
-    labelText.className = "text-xs text-gray-500 dark:text-gray-400 mt-1";
+    labelText.className = "text-xs text-gray-900 dark:text-gray-400 mt-1";
     labelText.innerText = label;
 
     wrapper.appendChild(text);

@@ -19,7 +19,7 @@ export default function Comments() {
     const info = document.createElement("div");
     info.textContent = "Be the first to comment on this post!";
     info.className =
-      "p-2 text-center text-[12px] rounded-sm shadow-xl border border-accent-light dark:border-accent-dark";
+      "p-2 text-center text-[12px] rounded-sm shadow-md border border-accent-light dark:border-accent-dark";
 
     commentsContainer.appendChild(info);
 
