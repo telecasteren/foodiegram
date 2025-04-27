@@ -36,6 +36,10 @@ cd foodiegram
 
 **Install the dependencies:**
 
+```bash
+npm install
+```
+
 This will install:
 
 - Express.js (backend server)
