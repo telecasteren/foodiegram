@@ -4,13 +4,14 @@ import { posts } from "/js/utils/source/posts/posts.js";
 import { userLookup } from "/js/utils/source/users/users.js";
 
 export function submitPost() {
-  const submitBtn = document.getElementById("submit-btn");
+  const form = document.getElementById("new-post-form");
   const cardContainer = document.getElementById("card-container");
 
-  if (!submitBtn || !cardContainer) return;
+  if (!form || !cardContainer) return;
 
-  submitBtn.removeEventListener("click", submitHandler);
-  submitBtn.addEventListener("click", submitHandler);
+  form.removeEventListener("submit", submitHandler);
+  form.addEventListener("submit", submitHandler);
+  console.log("submitBtn clicked.");
 }
 
 function submitHandler(event) {

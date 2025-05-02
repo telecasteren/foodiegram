@@ -4,6 +4,7 @@ focus:ring-blue-500 focus:border-blue-500`;
 
 export default function newPost() {
   const form = document.createElement("form");
+  form.id = "new-post-form";
   form.className = "p-4 md:p-5 w-full";
 
   const grid = document.createElement("div");

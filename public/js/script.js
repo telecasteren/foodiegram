@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // RENDER BOTTOM CONTENT:
   Footer();
 
-  // Load posts from localStorage
+  /** Loads posts from localStorage */
   function loadPosts() {
     const storedPosts = JSON.parse(localStorage.getItem("posts")) || [];
     const cardContainer = document.getElementById("card-container");
